@@ -5,7 +5,7 @@ import pandas as pd
 import glob
 import os
 
-# Plot manhattan and QQ plots for summary statistics
+# Plot manhattan and QQ plots for deprivation index summary statistics
 # Path to your folder
 folder_path = "/Users/stephenvieno/Projects/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/Single-Variant-Analysis/Summary-Statistics"
 # Path to save plots
