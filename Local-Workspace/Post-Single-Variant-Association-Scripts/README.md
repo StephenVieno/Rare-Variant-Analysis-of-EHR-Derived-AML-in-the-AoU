@@ -4,20 +4,26 @@
 ### RSID-Deprivation-Index-Assignment.py
  - This script assigns rsIDs to variants present in the common single-variant summary statistics (including the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the subsequent script, Merge-Rsid-Deprivation-Index-PLINK.py.
 ### Merge-Rsid-PLINK.py
-- Merge-Rsid-PLINK.py combines chromosome-specific summary statistics files generated after rsID assignment into a single, genome-wide file. The script merges per-chromosome outputs produced by GWASLab, ensuring consistent formatting and variant alignment across chromosomes, and generates a unified summary statistics file suitable for downstream analyses and workflows.
+- This script combines chromosome-specific summary statistics files generated after rsID assignment into a single, genome-wide file. The script merges per-chromosome outputs produced by GWASLab, ensuring consistent formatting and variant alignment across chromosomes, and generates a unified summary statistics file suitable for downstream analyses and workflows.
 ### Merge-Rsid-Deprivation-Index-PLINK.py
-- Merge-Rsid-Deprivation-Index-PLINK.py combines chromosome-specific summary statistics files generated after rsID assignment into a single, genome-wide file. The script merges per-chromosome outputs produced by GWASLab, ensuring consistent formatting and variant alignment across chromosomes, and generates a unified summary statistics file suitable for downstream analyses and workflows.
+- This script combines chromosome-specific summary statistics files generated after rsID assignment into a single, genome-wide file. The script merges per-chromosome outputs produced by GWASLab, ensuring consistent formatting and variant alignment across chromosomes, and generates a unified summary statistics file suitable for downstream analyses and workflows.
 
 # Summary Statistic Plots 
 ### Manhattan-QQ-Plot.py
+- This script generates Manhattan and quantile–quantile (QQ) plots from common single-variant summary statistics (excluding the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). The script visualizes association signals across the genome by chromosome in the Manhattan plot and assesses the distribution of observed versus expected p-values in the QQ plot to evaluate potential inflation or systematic bias.
 ### Manhattan-QQ-Deprivation-Index-Plot.py
-
+- This script generates Manhattan and quantile–quantile (QQ) plots from common single-variant summary statistics (including the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). The script visualizes association signals across the genome by chromosome in the Manhattan plot and assesses the distribution of observed versus expected p-values in the QQ plot to evaluate potential inflation or systematic bias.
+- 
 # MAGMA Scripts  
 ### MAGMA.sh
+- This script performs gene and gene-set association analyses on common single-variant summary statistics (excluding the deprivation index) using [MAGMA](https://cncr.nl/research/magma/) (v1.10). Prior to analysis, common variants were mapped to rsIDs using [GWASLab](https://cloufield.github.io/gwaslab/) with dbSNP Build 157. Variants were then assigned to genes using a window of 35 kb upstream and 10 kb downstream of each gene. Gene-level association tests were followed by gene-set analyses using gene sets from [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb) (release 2025.1.Hs).
 ### MAGMA-INDEX.sh
+- This script performs gene and gene-set association analyses on common single-variant summary statistics (including the deprivation index) using [MAGMA](https://cncr.nl/research/magma/) (v1.10). Prior to analysis, common variants were mapped to rsIDs using [GWASLab](https://cloufield.github.io/gwaslab/) with dbSNP Build 157. Variants were then assigned to genes using a window of 35 kb upstream and 10 kb downstream of each gene. Gene-level association tests were followed by gene-set analyses using gene sets from [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb) (release 2025.1.Hs).
 ### MAGMA-WINDOW.sh
+- This script performs gene- and gene-set association analyses on common single-variant summary statistics (excluding the deprivation index) using [MAGMA](https://cncr.nl/research/magma/) (v1.10). Variants were first mapped to rsIDs using [GWASLab](https://cloufield.github.io/gwaslab/) with dbSNP Build 157. Window sizes were varied across 11 iterations (0–100 kb upstream, 0–50 kb downstream), with gene-level tests followed by gene-set analyses using [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb) gene sets (release 2025.1.Hs).
 ### MAGMA-INDEX-WINDOWS.sh
-
+- This script performs gene- and gene-set association analyses on common single-variant summary statistics (including the deprivation index) using [MAGMA](https://cncr.nl/research/magma/) (v1.10). Variants were first mapped to rsIDs using [GWASLab](https://cloufield.github.io/gwaslab/) with dbSNP Build 157. Window sizes were varied across 11 iterations (0–100 kb upstream, 0–50 kb downstream), with gene-level tests followed by gene-set analyses using [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb) gene sets (release 2025.1.Hs).
+- 
 # Analysis Overview 
 ```markdown
 Single Variant Summary Statisticis
@@ -39,8 +45,6 @@ MAGMA Scripts
 ```
 ### Merge-PLINK.py
 ### Merge-Deprivation-Index-PLINK.py
-
-
 
 
 
