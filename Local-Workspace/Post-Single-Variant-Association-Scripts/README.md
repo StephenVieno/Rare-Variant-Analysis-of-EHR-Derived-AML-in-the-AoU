@@ -17,7 +17,8 @@
 Summary Statisticis -> Merge-PLINK.py -> Merged Summary Statistics 
 Summary Statisticis -> RSID-Assignment.py -> Merge-Rsid-Deprivation-Index-PLINK.py -> Merged Summary Statistics 
 
-Single Variant Summary Statisticis
+```markdown
+# Single Variant Summary Statisticis
    |
    v
  Merge-PLINK.py or Merge-Deprivation-Index-PLINK.py
@@ -30,6 +31,7 @@ Merge-Rsid-PLINK.py or Merge-Rsid-Deprivation-Index-PLINK.py
    |
    v
 Preprocessed Summary Statistics 
+```
 
 # Plot Common Variant Single Varinat Summary Statistics  
 1. Manhattan-QQ-Plot.py
