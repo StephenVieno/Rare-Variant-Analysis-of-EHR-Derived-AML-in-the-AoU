@@ -1,6 +1,6 @@
 # Preprocessing Summary Statistics  
-
 ### RSID-Assignment.py
+ - This script assigns rsIDs to variants present in the AoU using gwaslab [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the script Merge-Rsid-PLINK.py.
 ### RSID-Deprivation-Index-Assignment.py
 ### Merge-Rsid-PLINK.py
 ### Merge-Rsid-Deprivation-Index-PLINK.py
@@ -14,7 +14,8 @@
 ### MAGMA-INDEX.sh
 ### MAGMA-WINDOW.sh
 ### MAGMA-INDEX-WINDOWS.sh
-   
+
+# Analysis Overview 
 ```markdown
 Single Variant Summary Statisticis
    |
