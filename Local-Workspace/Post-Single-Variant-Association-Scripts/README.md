@@ -1,17 +1,15 @@
 # Preprocessing Summary Statistics  
-### Merge-PLINK.py
--
-### Merge-Deprivation-Index-PLINK.py
+
 ### RSID-Assignment.py
 ### RSID-Deprivation-Index-Assignment.py
 ### Merge-Rsid-PLINK.py
 ### Merge-Rsid-Deprivation-Index-PLINK.py
 
-# Summary Statistics Plots 
+# Summary Statistic Plots 
 ### Manhattan-QQ-Plot.py
 ### Manhattan-QQ-Deprivation-Index-Plot.py
 
-# MAGAMA Scripts  
+# MAGMA Scripts  
 ### MAGMA.sh
 ### MAGMA-INDEX.sh
 ### MAGMA-WINDOW.sh
@@ -30,12 +28,13 @@ RSID-Assignment.py or RSID-Deprivation-Index-Assignment.py
 Merge-Rsid-PLINK.py or Merge-Rsid-Deprivation-Index-PLINK.py
    |
    v
-Preprocessed Summary Statistics -> Summary Statistics Plots  
+Preprocessed Summary Statistics -> Summary Statistic Plots  
    |
    v
 MAGMA Scripts 
 ```
-
+### Merge-PLINK.py
+### Merge-Deprivation-Index-PLINK.py
 
 
 
