@@ -17,7 +17,6 @@
 Summary Statisticis -> Merge-PLINK.py -> Merged Summary Statistics 
 Summary Statisticis -> RSID-Assignment.py -> Merge-Rsid-Deprivation-Index-PLINK.py -> Merged Summary Statistics 
 
-```markdown
 Single Variant Summary Statisticis
    |
    v
