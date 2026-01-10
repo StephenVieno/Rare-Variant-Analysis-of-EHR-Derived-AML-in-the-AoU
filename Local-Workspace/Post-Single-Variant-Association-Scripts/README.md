@@ -7,6 +7,7 @@
 6. Merge-Rsid-Deprivation-Index-PLINK.py
 
 Summary Statisticis -> Merge-PLINK.py -> Merged Summary Statistics 
+
 Summary Statisticis -> RSID-Assignment.py -> Merge-Rsid-Deprivation-Index-PLINK.py -> Merged Summary Statistics 
 
 # Plot Common Variant Single Varinat Summary Statistics  
