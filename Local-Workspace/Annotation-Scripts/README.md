@@ -24,7 +24,7 @@
 ### Exome-Burden-PRS.py
 - This script generates a weight file for exome burden–based polygenic risk score (PRS) calculation. All coding and non-coding variants are assigned a weight of one, and the output is formatted for use with plink2.
 
-# Analysis Overview 
+# Pipeline Overview 
 ```markdown
 AoU Quality Controlled Variants 
    |
