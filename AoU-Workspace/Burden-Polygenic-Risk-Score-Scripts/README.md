@@ -1,14 +1,15 @@
 
 
-AML-Exome-Burden-Analysis-PRS-Exome.ipynb
 
-AML-Exome-Burden-Analysis-Results.ipynb
+
+
 
 
 
 AML-Exome-Burden-Analysis.ipynb
+This script calculates a rare-variant polygenic risk score based on exome burden. Each exome burden is processed iteratively. The script aggregates chromosome-level exome burden score files to compute the overall exome burden score, including both rare coding and non-coding variation. The resulting sum represents the exome burden polygenic risk score for the exome.
 
-EXOME BURDEN SCORE.ipynb
+AML-Exome-Burden-Analysis-PRS-Exome.ipynb
 This script calculates a rare-variant polygenic risk score based on exome burden. Each exome burden is processed iteratively. The script aggregates chromosome-level exome burden score files to compute the overall exome burden score, including both rare coding and non-coding variation. The resulting sum represents the exome burden polygenic risk score for the exome.
 
 
@@ -32,3 +33,4 @@ This script runs a logistic regression for unrelated individuals using the gene-
 AML-Exome-Burden-Analysis-Logistic-Regression.ipynb
 This script runs a logistic regression using the gene-set rare polygenic risk score, the exome burden polygenic risk score, principal components, age, and sex to identify gene sets that harbor rare variants significantly associated with acute myeloid leukaemia.
 
+AML-Exome-Burden-Analysis-Results.ipynb
