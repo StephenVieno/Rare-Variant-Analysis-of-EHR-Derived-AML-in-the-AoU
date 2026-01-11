@@ -16,5 +16,5 @@
 
 [Post Single Variant Association Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/Local-Workspace/Post-Single-Variant-Association-Scripts) 
 
-![image](Graphical Abstract Extract.png)
+![image](Graphical-Abstract-Extract.png)
 
