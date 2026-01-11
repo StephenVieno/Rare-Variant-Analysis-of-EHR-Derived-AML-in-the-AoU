@@ -23,6 +23,10 @@
 - This script performs gene- and gene-set association analyses on common single-variant summary statistics (excluding the deprivation index) using [MAGMA](https://cncr.nl/research/magma/) (v1.10). Variants were first mapped to rsIDs using [GWASLab](https://cloufield.github.io/gwaslab/) with dbSNP Build 157. Window sizes were varied across 11 iterations (0–100 kb upstream, 0–50 kb downstream), with gene-level tests followed by gene-set analyses using [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb) gene sets (release 2025.1.Hs).
 ### MAGMA-INDEX-WINDOWS.sh
 - This script performs gene- and gene-set association analyses on common single-variant summary statistics (including the deprivation index) using [MAGMA](https://cncr.nl/research/magma/) (v1.10). Variants were first mapped to rsIDs using [GWASLab](https://cloufield.github.io/gwaslab/) with dbSNP Build 157. Window sizes were varied across 11 iterations (0–100 kb upstream, 0–50 kb downstream), with gene-level tests followed by gene-set analyses using [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb) gene sets (release 2025.1.Hs).
+### MAGMA-Window-Plots.R
+- MAGMA-Window-Plots.R visualizes MAGMA gene and gene-set results (excluding the deprivation index) across different gene-mapping window sizes to assess the robustness of associations to window choice.
+### MAGMA-Window-Index-Plots.R
+- MAGMA-Window-Index-Plots.R visualizes MAGMA gene and gene-set results (including the deprivation index) across different gene-mapping window sizes to assess the robustness of associations to window choice.
 
 # Analysis Overview 
 ```markdown
