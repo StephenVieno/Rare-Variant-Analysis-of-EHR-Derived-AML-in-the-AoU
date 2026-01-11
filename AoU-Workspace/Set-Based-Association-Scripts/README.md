@@ -1,5 +1,4 @@
-
-# AML - SAIGE-GENE SET BASED - ASSOCIATION ANALYSIS
+# SAIGE-GENE+ Set-based Association Pipeline
 ### AML-SAIGE-GENE-Set-Based-Step01.ipynb
 - This script calculates variant minor allele counts from the genomic PLINK file used to generate the sparse Genetic Relationship Matrix (GRM). Before computing the counts, the PLINK file is subsetted to exclude samples that were not used in constructing the sparse GRM.
 
@@ -26,6 +25,18 @@
 
 ### AML-SAIGE-GENE-Set-Based-Step05-Deprivation.ipynb
 - This script performs rare variant set-based gene association tests for each chromosome using SAIGE-GENE+. It is configured to use the sparse GRM with 2,000 randomly selected markers to estimate the variance ratio. Maximum minor allele frequency thresholds for each test are set at 1%, 0.1%, and 0.001%. The script evaluates the annotation groups Missense, Loss-of-Function, and a combination of Missense and Loss-of-Function. An additional analysis is conducted using only synonymous variants; this is executed with a separate command so that the Cauchy values from the first test reflect only predicted deleterious variants (Missense and Loss-of-Function).
+
+# SAIGE-GENE+ Set-based Association Plot Scripts 
+### AML-Manhattan-Plot.ipynb 
+– This script generates a standard Manhattan plot to visualize genome-wide association signals across chromosomes.
+### AML-Manhattan-Cauchy-Plot.ipynb 
+– This script produces a Manhattan plot based on Cauchy-combined p-values, enabling aggregation of multiple tests or models into a single association signal.
+### AML-Manhattan-MAF-Threshold-Plot.ipynb 
+– This script creates Manhattan plots stratified or filtered by minor allele frequency (MAF) thresholds to evaluate the impact of allele frequency on association signals.
+### AML-QQ-Plot.ipynb 
+– This script generates quantile–quantile (QQ) plots to assess p-value calibration, inflation, and potential population stratification.
+### AML-Correlation-Check-Plot.ipynb 
+– This script visualizes correlations among summary statistics (comparing analyses with and without inclusion of the deprivation index) to identify differences in genetic signals.
 
 # Overview Pipeline 
 ```markdown
@@ -65,5 +76,8 @@ AML-SAIGE-GENE-Set-Based-Step04 (SAIGE-GENE Step 1) or AML-SAIGE-GENE-Set-Based-
    v
 AML-SAIGE-GENE-Set-Based-Step05 (SAIGE-GENE Step 2) or AML-SAIGE-GENE-Set-Based-Step05-Deprivation-Index
 - Group Annotation Files required
+   |
+   v
+SAIGE-GENE+ Set-based Association Plot Scripts 
 ```
 
