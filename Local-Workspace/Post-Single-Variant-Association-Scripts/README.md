@@ -29,9 +29,6 @@
 Single Variant Summary Statisticis
    |
    v
- Merge-PLINK.py or Merge-Deprivation-Index-PLINK.py
-   |
-   v
 RSID-Assignment.py or RSID-Deprivation-Index-Assignment.py
    |
    v
@@ -44,14 +41,24 @@ Preprocessed Summary Statistics -> Summary Statistic Plots
 MAGMA Scripts 
 ```
 
-# Additional Scripts 
+# Summary Statistics Correlation Scripts 
 ### Merge-PLINK.py
 - This script combines chromosome-specific summary statistics files (excluding the deprivation index) generated before rsID assignment into a single, genome-wide file. 
 ### Merge-Deprivation-Index-PLINK.py
 - This script combines chromosome-specific summary statistics files (including the deprivation index) generated before rsID assignment into a single, genome-wide file. 
+### Correlation-Single-Variant-Plot.R
+This script computes the Spearman correlation between common single variant summary statistics generated with and without the deprivation index as a covariate. The Spearman correlation coefficient is reported in the plot, which compares the negative log p-values from the two analyses.
 
-
-
+# Analysis Overview 
+```markdown
+Single Variant Summary Statisticis
+   |
+   v
+Merge-PLINK.py or Merge-Deprivation-Index-PLINK.py
+   |
+   v
+Correlation-Single-Variant-Plot.R
+```
 
 
 
