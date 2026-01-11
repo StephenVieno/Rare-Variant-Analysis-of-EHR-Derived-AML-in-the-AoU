@@ -1,4 +1,6 @@
-EXOME BURDEN SCORE
+AML-Exome-Burden-Analysis.ipynb
+
+EXOME BURDEN SCORE.ipynb
 This script calculates a rare-variant polygenic risk score based on exome burden. Each exome burden is processed iteratively. The script aggregates chromosome-level exome burden score files to compute the overall exome burden score, including both rare coding and non-coding variation. The resulting sum represents the exome burden polygenic risk score for the exome.
 
 EXOME BURDEN LOGISTIC REGRESSION
