@@ -24,7 +24,7 @@ Bulk RNA-Seq Quality Control Scripts (Normal Tissue, Bone Marrow, or Peripheral 
 Cox Regression Gene Expression Scripts (Normal Tissue, Bone Marrow, or Peripheral Blood)
    |
    v
-Cox Regression Gene-sets -> Rare Variant Polygenic Risk Score Analysis 
+Cox Regression Gene-sets -> Rare Variant Polygenic Risk Score Pipeline 
 ```
 
 # Differential Gene Expression Scripts 
