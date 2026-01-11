@@ -23,6 +23,7 @@ This script creates a PLINK BED file from the exome dataset by subsetting varian
 ### AML-LOVO-Step02-UVA.ipynb
 This script submits the commands for the leave-one-variant-out (LOVO) analysis. It performs Step 2 of the SAIGE-GENE+ association tests for each variant set, where each set has exactly one variant removed from the full collection. The script iterates over all annotation files, with each file representing a reduced variant set missing one specific variant. By looping through these files, the pipeline re-runs Step 2 for every leave-one-out subset, allowing for evaluation of each variant’s individual contribution to the overall gene-based association signal and identifying variants that disproportionately influence the test statistic.
 
+#  Pipeline Overview 
 ```markdown
 Set-Based Pipeline 
    |
