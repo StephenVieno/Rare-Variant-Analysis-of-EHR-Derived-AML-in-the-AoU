@@ -51,3 +51,12 @@ AML-SAIGE-GENE-Set-Based-Step04 (SAIGE-GENE Step 1) or AML-SAIGE-GENE-Set-Based-
    v
 AML-Annotation-Threshold-Manhattan-Plot
 ```
+
+# Links
+- [Variant Effect Predictor](https://www.ensembl.org/info/docs/tools/vep/index.html)
+- [Variant Effect Predictor Plugins](https://www.ensembl.org/info/docs/tools/vep/script/vep_plugins.html)
+- [LOFTEE](https://github.com/konradjk/loftee)
+- [SpliceAI](https://github.com/Illumina/SpliceAI?tab=readme-ov-file)
+- [AlphaMissense](https://alphamissense.hegelab.org)
+  
+
