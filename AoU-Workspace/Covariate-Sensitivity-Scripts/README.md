@@ -1,10 +1,4 @@
 # Covariate Sensitivity Pipeline 
-### AML-Phenotype-Time-To-Event.ipynb
-- This script creates a time-to-event phenotype file for electronic health record–defined acute myeloid leukemia. The earliest electronic health record corresponding to acute myeloid leukemia is considered the event. Time-to-event was calculated both from birth and from the date of the earliest electronic health record.
-
-### AML-Phenotype-Time-To-Event-With-Covariates.ipynb
-- This script creates a time-to-event phenotype file for electronic health record–defined acute myeloid leukemia. The earliest electronic health record corresponding to acute myeloid leukemia is considered the event. Time-to-event was calculated both from birth and from the date of the earliest electronic health record. Covariates include documented benzene exposure, smoking status, and exposure to alkylating agents. Additionally, exposure to alkylating agents was assigned only if the electronic health record occurred before the first record of acute myeloid leukemia.
-
 ### AML-Exome-Burden-Analysis-Top-Genes-PRS.ipynb
 - This script generates a rare variant polygenic risk score file for the top three significant genes identified in the SAIGE-GENE+ set-based analysis. The resulting file contains one column per gene, representing the rare-variant polygenic risk score burden for that gene for each individual. Each predicted deleterious rare variant (missense or loss-of-function; MAF < 1%) present within a gene for a given individual is assigned a weight of 1. The gene-level score is then computed as the sum of all predicted deleterious rare variants present within that gene for each individual.
 
