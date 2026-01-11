@@ -1,3 +1,6 @@
+EXOME BURDEN SCORE
+This script calculates a rare-variant polygenic risk score based on exome burden. Each exome burden is processed iteratively. The script aggregates chromosome-level exome burden score files to compute the overall exome burden score, including both rare coding and non-coding variation. The resulting sum represents the exome burden polygenic risk score for the exome.
+
 EXOME BURDEN LOGISTIC REGRESSION
 This script runs a logistic regression for unrelated individuals using the gene-set rare polygenic risk score, the exome burden polygenic risk score, principal components, age, and sex to identify gene sets that harbor rare variants significantly associated with acute myeloid leukaemia.
 
