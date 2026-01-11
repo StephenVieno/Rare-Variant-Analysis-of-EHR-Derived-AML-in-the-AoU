@@ -16,10 +16,10 @@
 
 # Phenotype Plots 
 ### AML-Phenocodes-Plot.ipynb
-- This notebook generates visualizations summarizing phenotype code distributions used in defining AML cases and related clinical features. These plots are intended for quality control and exploratory analysis of phenocode frequency and overlap within the cohort.
+- This notebook generates age-stratified visualizations of phenotype code distributions used to define AML cases, enabling assessment of EHR phenotype prevalence across the age spectrum.
 
 ### AML-Deprivation-Index-Plot.ipynb
-- This notebook produces plots illustrating the distribution of the deprivation index among AML cases and controls. The visualizations are used to assess differences between groups and to evaluate the suitability of the deprivation index as a covariate in downstream analyses.
+- This notebook generates age-stratified visualizations of phenotype code distributions used to define AML cases (in the deprviation index cohort), enabling assessment of EHR phenotype prevalence across the age spectrum.
 
 # Pipeline Overview 
 ```markdown
