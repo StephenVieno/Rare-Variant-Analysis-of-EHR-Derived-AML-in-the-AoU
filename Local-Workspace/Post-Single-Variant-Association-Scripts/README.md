@@ -1,7 +1,7 @@
 # Preprocessing Summary Statistics 
 ### RSID-Assignment.py
 - This script assigns rsIDs to variants present in the common single-variant summary statistics (excluding the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the subsequent script, Merge-Rsid-PLINK.py.
- - Summary Statistics Pipepline: [SAIGE-GENE+ Single Variant Association Pipeline](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Single-Variant-Association-Scripts)
+   - Summary Statistics Pipepline: [SAIGE-GENE+ Single Variant Association Pipeline](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Single-Variant-Association-Scripts)
 ### RSID-Deprivation-Index-Assignment.py
 - This script assigns rsIDs to variants present in the common single-variant summary statistics (including the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the subsequent script, Merge-Rsid-Deprivation-Index-PLINK.py.
 ### Merge-Rsid-PLINK.py
