@@ -13,21 +13,18 @@ Insert Abstract
 
 - [Single-Variant-Association-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Single-Variant-Association-Scripts)
 
-
-
 - [Set-Based-Association-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Set-Based-Association-Scripts)
 
-- [Annotation-Sensitivity-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Annotation-Sensitivity-Scripts)
+  - [Annotation-Sensitivity-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Annotation-Sensitivity-Scripts)
 
-- [Leave-One-Variant-Out-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Leave-One-Variant-Out-Scripts)
+  - [Leave-One-Variant-Out-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Leave-One-Variant-Out-Scripts)
 
 - [Burden-Polygenic-Risk-Score-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Burden-Polygenic-Risk-Score-Scripts)
 
-- [Covariate-Sensitivity-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Covariate-Sensitivity-Scripts)
+  - [Covariate-Sensitivity-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Covariate-Sensitivity-Scripts)
 
 - [GAUSS-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/GAUSS-Scripts)
 
-- 
 ## Local Workspace 
 - [Annotation Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/Local-Workspace/Annotation-Scripts)
 
