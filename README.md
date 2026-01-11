@@ -1,5 +1,6 @@
 # Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU
 
+[Environment Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Environment-Scripts)
 [Single-Variant-Association-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Single-Variant-Association-Scripts)
 
 
