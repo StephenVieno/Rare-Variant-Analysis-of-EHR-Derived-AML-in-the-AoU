@@ -1,3 +1,6 @@
+# Cox Regression Gene Expression Summary 
+Bulk RNA-seq data from the GDC were analyzed for AML patients, including primary tumor bone marrow and peripheral blood samples, and normal bone marrow. Lowly expressed genes (raw counts <10) were removed, and remaining genes were variance-stabilized using DESeq2. For each protein-coding gene, Cox regression was used to assess associations with survival time, adjusting for age and gender, with continuous variables standardized. Gene-level p-values were Bonferroni-corrected, and significant genes (p < 0.05) were retained and classified into gene sets associated with increased (HR > 1) or decreased (HR < 1) mortality risk based on expression direction.
+
 # Bulk RNA-Seq Quality Control Scripts 
 ### RNA-Seq-QC-Normal-Tissue.R
 - Performs quality control on RNA-Seq data from normal tissue samples in bone marrow. Ensures data integrity before downstream analyses.
