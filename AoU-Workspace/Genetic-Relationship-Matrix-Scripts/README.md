@@ -13,6 +13,7 @@ This script creates PLINK files from array data in the African, American, and Eu
 ### GRM-QC-Step04.ipynb
 This script calculates the GRM for the African, American, and European ancestry groups using Sparse GRM, 5,000 randomly selected markers, a minor allele frequency (MAF) > 0.01, and a relatedness cutoff of 0.05.
 
+# Pipeline Overview 
 ```markdown
 Workspace Environment Scripts 
    |
