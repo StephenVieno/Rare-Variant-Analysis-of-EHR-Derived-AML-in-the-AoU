@@ -41,7 +41,7 @@ SAIGE-GENE+ Annotation File Scripts
 - Leave-One-Variant-Out-Annotations.py
 ```
 
-# Annotaiton Links
+# Annotation Links
 - [Variant Effect Predictor](https://www.ensembl.org/info/docs/tools/vep/index.html)
 - [Variant Effect Predictor Plugins](https://www.ensembl.org/info/docs/tools/vep/script/vep_plugins.html)
 - [LOFTEE](https://github.com/konradjk/loftee)
