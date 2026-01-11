@@ -17,3 +17,6 @@ This script calculates the rare variant polygenic risk score for gene sets deriv
 
 AML SINGLE CELL DIFFERENTIAL GENE EXPRESSION
 This script calculates the rare variant polygenic risk score for gene sets derived from single cell RNA-seq differential expression analysis of acute myeloid leukemia. The gene-level polygenic risk score files are first downloaded from the workspace bucket. Each gene set is then processed in a loop. For each gene in a given set, the script identifies the corresponding gene-level polygenic risk score file and adds its value to a running total. The final sum represents the polygenic risk score for the entire gene set.
+
+GDC SOMATIC MUTATIONS
+This script calculates the rare variant polygenic risk score for gene sets derived from GDC somatic mutations. The gene-level polygenic risk score files are first downloaded from the workspace bucket. Each gene set is then processed in a loop. For each gene in a given set, the script identifies the corresponding gene-level polygenic risk score file and adds its value to a running total. The final sum represents the polygenic risk score for the entire gene set.
