@@ -28,7 +28,7 @@
 ### MAGMA-Window-Index-Plots.R
 - MAGMA-Window-Index-Plots.R visualizes MAGMA gene and gene-set results (including the deprivation index) across different gene-mapping window sizes to assess the robustness of associations to window choice.
 
-# Analysis Overview 
+# Pipeline Overview 
 ```markdown
 Single Variant Summary Statisticis
    |
@@ -53,7 +53,7 @@ MAGMA Scripts
 ### Correlation-Single-Variant-Plot.R
 This script computes the Spearman correlation between common single variant summary statistics generated with and without the deprivation index as a covariate. The Spearman correlation coefficient is reported in the plot, which compares the negative log p-values from the two analyses.
 
-# Analysis Overview 
+# Pipeline Overview 
 ```markdown
 Single Variant Summary Statisticis
    |
