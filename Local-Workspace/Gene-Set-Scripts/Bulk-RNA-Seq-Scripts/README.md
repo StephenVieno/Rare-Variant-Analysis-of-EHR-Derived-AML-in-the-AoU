@@ -40,5 +40,5 @@ RNA-Seq-Differential-Expression-PCA.R
 RNA-Seq-Differential-Expression-Analysis.R
    |
    v
-Differential Gene Expression Gene-sets -> Rare Variant Polygenic Risk Score Analysis 
+Differential Gene Expression Gene-sets -> Rare Variant Polygenic Risk Score Pipeline 
 ```
