@@ -17,6 +17,7 @@ Bulk RNA-seq data from the GDC were analyzed for AML patients, including primary
 ### RNA-Seq-Primary-Tumour-Peripheral-Blood-Cox-Regression.R
 - Performs Cox proportional hazards analysis on RNA-Seq data from primary tumor samples in peripheral blood. Evaluates the impact of gene expression on survival outcomes.
 
+# Pipeline Overview 
 ```markdown
 Bulk RNA-Seq Quality Control Scripts (Normal Tissue, Bone Marrow, or Peripheral Blood) 
    |
