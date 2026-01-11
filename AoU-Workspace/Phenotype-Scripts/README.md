@@ -8,6 +8,13 @@
 ### Observation-Period.ipynb
 - The script calculates both the age and the observation period for all individuals in the AoU. Age is defined as the age at the most recent electronic health record encounter, while the observation period is measured from the first to the last electronic health record. The duration in days is then converted to years by dividing by 365.25.
 
+
+AML-Phenocodes-Plot.ipynb
+This notebook generates visualizations summarizing phenotype code distributions used in defining AML cases and related clinical features. These plots are intended for quality control and exploratory analysis of phenocode frequency and overlap within the cohort.
+
+AML-Deprivation-Index-Plot.ipynb
+This notebook produces plots illustrating the distribution of the deprivation index among AML cases and controls. The visualizations are used to assess differences between groups and to evaluate the suitability of the deprivation index as a covariate in downstream analyses.
+
 # Pipeline Overview 
 ```markdown
 Workspace Environment Scripts 
