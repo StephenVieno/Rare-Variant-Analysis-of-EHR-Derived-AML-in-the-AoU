@@ -1,8 +1,9 @@
-# Preprocessing Summary Statistics  
+# Preprocessing Summary Statistics 
 ### RSID-Assignment.py
- - This script assigns rsIDs to variants present in the common single-variant summary statistics (excluding the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the subsequent script, Merge-Rsid-PLINK.py.
+- This script assigns rsIDs to variants present in the common single-variant summary statistics (excluding the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the subsequent script, Merge-Rsid-PLINK.py.
+ - Summary Statistics Pipepline: [SAIGE-GENE+ Single Variant Association Pipeline](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Single-Variant-Association-Scripts)
 ### RSID-Deprivation-Index-Assignment.py
- - This script assigns rsIDs to variants present in the common single-variant summary statistics (including the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the subsequent script, Merge-Rsid-Deprivation-Index-PLINK.py.
+- This script assigns rsIDs to variants present in the common single-variant summary statistics (including the deprivation index) using [GWASLab](https://cloufield.github.io/gwaslab/). Each chromosome is processed in a loop, and the chromosome-specific results are then combined using the subsequent script, Merge-Rsid-Deprivation-Index-PLINK.py.
 ### Merge-Rsid-PLINK.py
 - This script combines chromosome-specific summary statistics files (excluding the deprivation index) generated after rsID assignment into a single, genome-wide file. The script merges per-chromosome outputs produced by GWASLab, ensuring consistent formatting and variant alignment across chromosomes, and generates a unified summary statistics file suitable for downstream analyses and workflows.
 ### Merge-Rsid-Deprivation-Index-PLINK.py
