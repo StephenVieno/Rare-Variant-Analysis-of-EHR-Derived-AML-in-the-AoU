@@ -2,6 +2,7 @@
 Somatic mutation data in protein-coding genes were obtained from the [Genomic Data Commons](https://portal.gdc.cancer.gov) (GDC). Two main sets of gene-sets were created:
 1. Across all cancer types (16,747 participants):
 - Protein-coding genes with ≥1 somatic mutation
+-- (cancer-frequently-mutated-census-genes-protein-coding-vep-high.tsv)
 - Protein-coding genes with ≥1 mutation predicted to have moderate or high impact (VEP)
 - Protein-coding genes with ≥1 mutation predicted to have high impact (VEP)
 All genes were high-confidence cancer drivers from the Cancer Gene Census.
@@ -11,3 +12,15 @@ All genes were high-confidence cancer drivers from the Cancer Gene Census.
 - Protein-coding genes with ≥1 mutation predicted to have high impact (VEP)
 All genes were high-confidence cancer drivers from the Cancer Gene Census.
 Overall, the study categorized high-confidence cancer-driving genes based on mutation frequency and predicted functional impact, both pan-cancer and AML-specific.
+
+
+aml-frequently-mutated-census-genes-protein-coding-vep-high.tsv
+
+aml-frequently-mutated-census-genes-protein-coding-vep-moderate-high.tsv
+
+aml-frequently-mutated-census-genes-protein-coding.tsv
+
+
+cancer-frequently-mutated-census-genes-protein-coding-vep-moderate-high.tsv
+
+cancer-frequently-mutated-census-genes-protein-coding.tsv
