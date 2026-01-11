@@ -1,5 +1,8 @@
 # Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU
 
+[Single-Variant-Association-Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/AoU-Workspace/Single-Variant-Association-Scripts)
+
+
 [Annotation Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/Local-Workspace/Annotation-Scripts)
 
 [Gene Set Scripts](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/Local-Workspace/Gene-Set-Scripts) 
