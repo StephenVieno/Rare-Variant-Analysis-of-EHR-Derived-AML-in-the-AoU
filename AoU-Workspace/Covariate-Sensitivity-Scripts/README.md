@@ -1,4 +1,4 @@
-# COVARIATE SENSITIVITY ANALYSIS
+# Covariate Sensitivity Pipeline 
 ### AML-Phenotype-Time-To-Event.ipynb
 - This script creates a time-to-event phenotype file for electronic health record–defined acute myeloid leukemia. The earliest electronic health record corresponding to acute myeloid leukemia is considered the event. Time-to-event was calculated both from birth and from the date of the earliest electronic health record.
 
