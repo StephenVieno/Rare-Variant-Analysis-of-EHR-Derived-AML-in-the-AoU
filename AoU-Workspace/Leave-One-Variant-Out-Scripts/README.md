@@ -1,11 +1,11 @@
-# CROSS REFERENCE MARK LIST WITH GDC AND CLINVAR
+# Cross Reference Mark List with GDC and Clinvar 
 ### AML-Marker-List.ipynb
 - This script cross-references variants in the SAIGE-GENE+ marker list with somatic variants from the GDC and germline variants from ClinVar. Analyses are conducted separately for ultra-rare variants (MAC ≤ 10) and rare variants (MAF < 1% and MAC > 10). AoU IDs are converted to HGVS IDs, and the GDC somatic mutation file is annotated to indicate the presence or absence of each variant. For ClinVar, variants are filtered to retain only those present in the marker list, resulting in a final consolidated list of variants.
 
 ### AML-Marker-List-Deprivation-Index.ipynb
 - This script cross-references variants in the SAIGE-GENE+ marker list from the deprivation index with somatic variants from the GDC and germline variants from ClinVar. Analyses are conducted separately for ultra-rare variants (MAC ≤ 10) and rare variants (MAF < 1% and MAC > 10). AoU IDs are converted to HGVS IDs, and the GDC somatic mutation file is annotated to indicate the presence or absence of each variant. For ClinVar, variants are filtered to retain only those present in the marker list, resulting in a final consolidated list of variants.
 
-# LEAVE ONE VARIANT OUT ANALYSIS
+# Leave One Variatn Analysis 
 ### AML-LOVO-Step01.ipynb
 - This script creates a PLINK BED file from the exome dataset by subsetting variants that pass quality control within the genes of interest. The script must be submitted once for each chromosome containing a gene of interest. The resulting BED file is then used in a leave-one-variant-out analysis to determine which variants contribute most to the genome-wide significance of the genes of interest. Additionally, the script requires a list of variants that passed exome quality control and are located within the genes of interest.
 
