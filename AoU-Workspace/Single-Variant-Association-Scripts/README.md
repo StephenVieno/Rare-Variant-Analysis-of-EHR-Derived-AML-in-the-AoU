@@ -1,4 +1,4 @@
-# SAIGE-GENE Single Variant Association Pipeline
+# SAIGE-GENE+ Single Variant Association Pipeline
 ### AML-SAIGE-GENE-Single-Variant-Step01.ipynb
 - This script creates a PLINK file containing 1,000 randomly selected variants from the microarray dataset that was used to calculate the Sparse Genetic Relationship Matrix. To generate this file, the microarray dataset is first subset to include only individuals from the cohort used in the single-variant analysis, after which variants not present in the PLINK file are removed. From the remaining variants, 1,000 are randomly selected for use in the variance ratio estimation step in SAIGE-GENE+ (Step 1) for the single-variant association test.
 
