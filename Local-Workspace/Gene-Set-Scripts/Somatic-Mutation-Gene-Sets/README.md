@@ -1,5 +1,5 @@
-# Genomic Data Common Somatic Mutation Frequency Genes 
-Somatic mutation data in protein-coding genes were obtained from the Genomic Data Commons (GDC). Two main sets of gene-sets were created:
+# Genomic Data Common Somatic Mutation Frequency  
+Somatic mutation data in protein-coding genes were obtained from the [Genomic Data Commons](https://portal.gdc.cancer.gov) (GDC). Two main sets of gene-sets were created:
 1. Across all cancer types (16,747 participants):
 - Protein-coding genes with ≥1 somatic mutation
 - Protein-coding genes with ≥1 mutation predicted to have moderate or high impact (VEP)
