@@ -40,3 +40,11 @@ SAIGE-GENE+ Annotation File Scripts
 - Single-Class-Annotations.py
 - Leave-One-Variant-Out-Annotations.py
 ```
+
+# Annotaiton Links
+- [Variant Effect Predictor](https://www.ensembl.org/info/docs/tools/vep/index.html)
+- [Variant Effect Predictor Plugins](https://www.ensembl.org/info/docs/tools/vep/script/vep_plugins.html)
+- [LOFTEE](https://github.com/konradjk/loftee)
+- [SpliceAI](https://github.com/Illumina/SpliceAI?tab=readme-ov-file)
+- [AlphaMissense](https://alphamissense.hegelab.org)
+  
