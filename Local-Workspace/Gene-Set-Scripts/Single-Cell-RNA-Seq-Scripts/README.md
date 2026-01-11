@@ -14,7 +14,7 @@ Single-cell, cell type–specific gene sets were derived from differential expre
 ### GSE116256-Single-Cell-Differential-Expresssion.R
 - This script performs cell type–specific differential gene expression analysis using MAST, including only malignant and normal cells, testing multiple contrasts with appropriate covariates, and generating upregulated and downregulated gene sets using Bonferroni-corrected p-values <0.01 and |log2 fold change| ≥0.58.
 
-# Analysis Overview
+# Pipeline Overview 
 ```markdown
 GSE116256-Single-Cell-QC-Plots.R
    |
