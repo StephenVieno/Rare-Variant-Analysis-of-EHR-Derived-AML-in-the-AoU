@@ -1,6 +1,6 @@
 
 
-# Rare Variant Analysis for Acute Myeloid Leukemia Using the All of Us Whole Exome Sequencing Data
+# Prioritizing Genes and Rare Protein-Coding Variants in Acute Myeloid Leukemia via Whole Genome Sequencing Data
 
 Insert Abstract
 
