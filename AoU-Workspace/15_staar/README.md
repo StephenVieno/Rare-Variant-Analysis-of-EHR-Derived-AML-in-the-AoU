@@ -34,7 +34,6 @@ The notebooks are organized into sequential stages, beginning with genotype data
 | Notebook | Description |
 |---|---|
 | [05_Sparse_GRM.ipynb](05_Sparse_GRM.ipynb) | Constructs the sparse genetic relatedness matrix (GRM) required for mixed-model association testing. |
-| [05_Sparse_GRM_Copy1.ipynb](05_Sparse_GRM_Copy1.ipynb) | Additional copy of the sparse GRM workflow. |
 | [06_Preparation.ipynb](06_Preparation.ipynb) | Prepares phenotype, covariate, genotype, and annotation inputs required for STAAR analyses. |
 | [07_Null_Model_SPA.ipynb](07_Null_Model_SPA.ipynb) | Fits the null logistic mixed model incorporating the saddlepoint approximation (SPA) to account for case-control imbalance and population structure. |
 
