@@ -67,8 +67,6 @@ The general execution order is:
 9. `07_Null_Model_SPA.ipynb`
 10. `08_STAAR_Gene_Centric_Coding_SPA.ipynb`
 
-**Note:** Some steps may be executed independently or in parallel, depending on their input dependencies and computational requirements. The execution order should be adjusted accordingly.
-
 ## Analysis Framework
 
 The STAAR workflow incorporates functional annotation information to improve the power of rare variant association testing. Gene-centric analyses evaluate the cumulative effects of rare coding variants within genes using annotation-weighted association tests.
