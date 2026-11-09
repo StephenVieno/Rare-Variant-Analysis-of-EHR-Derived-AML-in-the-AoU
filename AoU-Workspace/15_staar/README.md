@@ -56,17 +56,16 @@ The following notebooks contain environment configuration and setup procedures f
 
 The general execution order is:
 
-1. `Setting_Env_Variables.ipynb`
-2. `Environment_DSUB.ipynb`
-3. `00_Conversion_To_BGEN.ipynb`
-4. `01_Conversion_To_GDS.ipynb`
-5. `02_Variant_Info.ipynb`
-6. `03_Annotate.ipynb`
-7. `04_Variant_Info_GDS.ipynb`
-8. `05_Sparse_GRM.ipynb`
-9. `06_Preparation.ipynb`
-10. `07_Null_Model_SPA.ipynb`
-11. `08_STAAR_Gene_Centric_Coding_SPA.ipynb`
+1. `Environment_DSUB.ipynb`
+2. `00_Conversion_To_BGEN.ipynb`
+3. `01_Conversion_To_GDS.ipynb`
+4. `02_Variant_Info.ipynb`
+5. `03_Annotate.ipynb`
+6. `04_Variant_Info_GDS.ipynb`
+7. `05_Sparse_GRM.ipynb`
+8. `06_Preparation.ipynb`
+9. `07_Null_Model_SPA.ipynb`
+10. `08_STAAR_Gene_Centric_Coding_SPA.ipynb`
 
 **Note:** Some steps may be executed independently or in parallel, depending on their input dependencies and computational requirements. The execution order should be adjusted accordingly.
 
