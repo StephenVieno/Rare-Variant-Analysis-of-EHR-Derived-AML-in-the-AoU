@@ -1,11 +1,3 @@
-# Workspace Environment Scripts  
-### Environment-PLINK2.ipynb
-- This script first downloads the latest version of PLINK 2 for Linux onto the All of Us Research Program Jupyter platform before uploading it to GCP Workspace Bucket. The uploaded version can then be copied into the working environment of a dsub command. By doing so, the latest release (PLINK v2.0.0-a.7LM, 64-bit Intel, 1 Sep 2025) becomes available for downstream analysis. To update PLINK 2 to a newer release, replace the version being downloaded and repeat the same steps. This method is used instead of running a Docker image, as directly copying PLINK 2 from GCP Workspace Bucket to the working environment is less computationally expensive and more cost-effective. The second half of the script verifies the new PLINK 2 module by checking the version number to confirm that the correct release has been downloaded and is functioning properly.
-
-### Environment-dsub.ipynb
-- The following script sets up the dsub environment within the Jupyter workspace of the All of Us (AoU) Research Program. This script was provided by AoU for this purpose. If an error occurs when running the script, it is likely that AoU has updated the command or their dsub system, such as changes to the workspace for the new version of dsub or an equivalent command.
-
-
 # Workspace Environment Setup
 
 This directory contains Jupyter notebooks for configuring the computational environment within the All of Us (AoU) Research Program Researcher Workbench. These scripts establish the necessary tools and dependencies for downstream genomic analyses, including running computational workflows through `dsub` and performing genetic data processing with PLINK 2.
@@ -35,7 +27,7 @@ The notebooks should generally be executed in the following order:
 
 ## Notes
 
-- These notebooks are intended to be executed within the All of Us Research Program Researcher Workbench.
+**These notebooks were designed to be executed within the All of Us Research Program Researcher Workbench prior to its transition to Verily.**
+**These scripts are no longer compatible with the current platform and should be considered historical documentation rather than functional setup instructions.**
 - Ensure that the appropriate Workspace Bucket is configured and accessible before executing the notebooks.
 - The PLINK 2 executable stored in the Workspace Bucket can be reused across subsequent `dsub` jobs without repeatedly downloading or installing the software.
-- AoU may periodically update its Researcher Workbench environment, `dsub` implementation, or supported installation procedures. Consequently, commands in these notebooks may require modification to remain compatible with the current platform.
