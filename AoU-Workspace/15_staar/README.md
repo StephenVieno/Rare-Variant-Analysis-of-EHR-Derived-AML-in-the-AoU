@@ -73,20 +73,6 @@ The STAAR workflow incorporates functional annotation information to improve the
 
 The analysis uses a logistic mixed-model framework to account for population structure and genetic relatedness, with saddlepoint approximation to improve statistical inference under case-control imbalance.
 
-## Software and Dependencies
-
-The analysis is conducted using the AoU Researcher Workbench and relies on the relevant software packages and computational tools required by the individual notebooks, including:
-
-- Python and R
-- Genomic Data Structure (GDS)
-- BGEN
-- STAAR and associated R packages
-- `dsub` for cloud-based job submission and execution
-- AoU WGS data and associated variant annotation resources
-
-Specific package versions, environment requirements, and configuration parameters are documented within the respective notebooks.
-
-## Repository
 
 All notebooks and associated analysis code are maintained in the following repository:
 
