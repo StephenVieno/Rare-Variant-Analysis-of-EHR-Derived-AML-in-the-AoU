@@ -73,8 +73,3 @@ The STAAR workflow incorporates functional annotation information to improve the
 
 The analysis uses a logistic mixed-model framework to account for population structure and genetic relatedness, with saddlepoint approximation to improve statistical inference under case-control imbalance.
 
-
-All notebooks and associated analysis code are maintained in the following repository:
-
-[**Rare Variant Analysis of EHR-Derived AML in the All of Us Research Program**](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU)
-
