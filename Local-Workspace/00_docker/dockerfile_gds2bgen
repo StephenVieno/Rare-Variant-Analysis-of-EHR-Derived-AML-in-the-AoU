@@ -1,4 +1,3 @@
-
 # The following code creates a Docker image for the GDS2BGEN
 
 # In order to build the Docker image, run the Docker build command below 
