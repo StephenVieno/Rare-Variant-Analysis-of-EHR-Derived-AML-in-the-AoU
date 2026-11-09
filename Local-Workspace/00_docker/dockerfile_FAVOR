@@ -1,0 +1,118 @@
+# The following code creates a Docker image for the FAVOR
+
+# In order to build the Docker image, run the Docker build command below 
+# (modifications might be necessary):
+# docker build --platform linux/amd64 -f dockerfile_FAVOR -t favor:v1.0 .
+# docker build --platform linux/arm64 -f dockerfile_FAVOR -t favor:v1.0 .
+
+FROM rocker/r-base:4.4.2
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# ============================================================
+# System dependencies
+# ============================================================
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    cmake \
+    pkg-config \
+    zlib1g-dev \
+    libbz2-dev \
+    liblzma-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libfontconfig1-dev \
+    libharfbuzz-dev \
+    libfribidi-dev \
+    libfreetype6-dev \
+    libpng-dev \
+    libtiff5-dev \
+    libjpeg-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# ============================================================
+# Install Rust + Cargo
+# ============================================================
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+    | sh -s -- -y
+
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+# ============================================================
+# Install xsv
+# ============================================================
+RUN cargo install xsv
+
+RUN xsv --version
+
+# ============================================================
+# Install BiocManager
+# ============================================================
+RUN R -e 'install.packages( \
+    "BiocManager", \
+    repos="https://cloud.r-project.org" \
+    )'
+
+# ============================================================
+# Bioconductor packages
+# ============================================================
+RUN R -e 'BiocManager::install(c( \
+    "gdsfmt", \
+    "SeqArray", \
+    "SeqVarTools" \
+    ), ask=FALSE, update=FALSE)'
+
+# ============================================================
+# CRAN packages
+# ============================================================
+RUN R -e 'install.packages(c( \
+    "data.table", \
+    "dplyr", \
+    "readr", \
+    "stringr" \
+    ), repos="https://cloud.r-project.org")'
+
+# ============================================================
+# Install gds2bgen
+# ============================================================
+RUN R -e 'install.packages( \
+    "remotes", \
+    repos="https://cloud.r-project.org" \
+    )'
+
+RUN R -e 'remotes::install_github( \
+    "zhengxwen/gds2bgen", \
+    upgrade="never" \
+    )'
+
+# ============================================================
+# Verify R packages
+# ============================================================
+RUN R -e ' \
+    library(gdsfmt); \
+    library(SeqArray); \
+    library(SeqVarTools); \
+    library(gds2bgen); \
+    cat("gdsfmt: "); print(packageVersion("gdsfmt")); \
+    cat("SeqArray: "); print(packageVersion("SeqArray")); \
+    cat("SeqVarTools: "); print(packageVersion("SeqVarTools")); \
+    cat("gds2bgen: "); print(packageVersion("gds2bgen")); \
+    '
+
+# ============================================================
+# Verify xsv
+# ============================================================
+RUN which xsv && xsv --version
+
+# ============================================================
+# Working directory
+# ============================================================
+WORKDIR /FAVORannotator
+
+CMD ["R"]

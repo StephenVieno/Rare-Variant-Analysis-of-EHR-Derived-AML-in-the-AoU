@@ -1,0 +1,82 @@
+
+# The following code creates a Docker image for the GDS2BGEN
+
+# In order to build the Docker image, run the Docker build command below 
+# (modifications might be necessary):
+# docker build --platform linux/amd64 -f dockerfile_gds2bgen -t gds2bgen:v1.0 .
+# docker build --platform linux/arm64 -f dockerfile_gds2bgen -t gds2bgen:v1.0 .
+
+FROM rocker/r-ver:4.4.3
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=UTC
+
+# ------------------------------------------------------------
+# System dependencies
+# ------------------------------------------------------------
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    unzip \
+    python3 \
+    python3-dev \
+    build-essential \
+    gfortran \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    liblzma-dev \
+    libpcre2-dev \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Make python available as "python"
+RUN ln -s /usr/bin/python3 /usr/local/bin/python
+
+# ------------------------------------------------------------
+# Install Bioconductor
+# ------------------------------------------------------------
+RUN R -e "install.packages('BiocManager', repos='https://cloud.r-project.org')"
+
+# Install required Bioconductor packages
+RUN R -e "BiocManager::install(c('gdsfmt', 'SeqArray'), ask=FALSE, update=FALSE)"
+
+# ------------------------------------------------------------
+# Install gds2bgen
+# ------------------------------------------------------------
+WORKDIR /opt
+
+RUN git clone --depth 1 https://github.com/CoreArray/gds2bgen.git
+
+WORKDIR /opt/gds2bgen/src
+
+# Build the bundled BGEN library
+RUN unzip bgen_v1.1.8.zip \
+    && cd bgen_v1.1.8 \
+    && python ./waf configure \
+    && python ./waf \
+    && cp build/libbgen.a .. \
+    && cp build/3rd_party/zstd-1.1.0/libzstd.a .. \
+    && cd .. \
+    && rm -rf bgen_v1.1.8 \
+    && touch libbgen.a
+
+# Install the R package
+WORKDIR /opt/gds2bgen
+
+RUN R CMD INSTALL .
+
+# ------------------------------------------------------------
+# Verify installation
+# ------------------------------------------------------------
+RUN R -e "library(gdsfmt); packageVersion('gdsfmt')" \
+    && R -e "library(SeqArray); packageVersion('SeqArray')" \
+    && R -e "library(gds2bgen); print(seqBGEN_Info())"
+
+# ------------------------------------------------------------
+# Working directory
+# ------------------------------------------------------------
+WORKDIR /data
+
+CMD ["R"]
