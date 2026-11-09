@@ -74,6 +74,5 @@ This directory contains Jupyter notebooks for defining and characterizing the el
 
 ## Notes
 
-- These notebooks were developed for use within the All of Us Research Program Researcher Workbench prior to its transition to Verily.
-- These scripts are no longer compatible with the current platform and should be considered historical documentation rather than functional analysis instructions.
-- The notebooks document the phenotype construction, variable derivation, and visualization procedures used in the original AML analyses.
+- **Some of these notebooks were developed for use within the All of Us Research Program Researcher Workbench prior to its transition to Verily.**
+- **Some of these scripts are no longer compatible with the current platform and should be considered historical documentation rather than functional analysis instructions.**
