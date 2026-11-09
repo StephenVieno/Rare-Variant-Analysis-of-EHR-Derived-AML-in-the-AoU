@@ -1,4 +1,3 @@
-
 # The following code creates a Docker image for the Variant Effect Predictor (VEP) 
 # with additional VEP plugins and LOFTEE. 
 # This Docker image was generated using VEP version 115.
