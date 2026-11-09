@@ -1,0 +1,114 @@
+
+# The following code creates a Docker image for the Variant Effect Predictor (VEP) 
+# with additional VEP plugins and LOFTEE. 
+# This Docker image was generated using VEP version 115.
+# This Docker image was generated using LOFTEE with GRCh38.
+# Additional downloads of the necessary files to run VEP, LOFTEE, MPC, and REVEL are still required.
+
+# In order to build the Docker image, run the Docker build command below 
+# (modifications might be necessary):
+# docker build --platform linux/amd64 -f dockerfile_VEP_plugins -t vep_115:loftee_grch38 .
+# docker build --platform linux/arm64 -f dockerfile_VEP_plugins -t vep_115:loftee_grch38 .
+
+# Run the following command in the terminal to confirm the installation of 
+# the correct version of VEP prior to proceeding: 
+# docker run --platform linux/amd64 vep_115:loftee_grch38 vep --help
+# docker run --platform linux/arm64 vep_115:loftee_grch38 vep --help
+
+FROM ubuntu:22.04
+
+RUN /bin/sh -c set -xe \
+    && echo '#!/bin/sh' > /usr/sbin/policy-rc.d \
+    && echo 'exit 101' >> /usr/sbin/policy-rc.d \
+    && chmod +x /usr/sbin/policy-rc.d \
+    && dpkg-divert --local --rename --add /sbin/initctl \
+    && cp -a /usr/sbin/policy-rc.d /sbin/initctl \
+    && sed -i 's/^exit.*/exit 0/' /sbin/initctl \
+    && echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup \
+    && echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean \
+    && echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean \
+    && echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean \
+    && echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages \
+    && echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes \
+    && echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests \
+    && apt-get update \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
+
+CMD ["/bin/bash"]
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    cpanminus \
+    curl \
+    git \
+    libmysqlclient-dev \
+    libpng-dev \
+    libssl-dev \
+    locales \
+    mysql-client \
+    openssl \
+    perl \
+    perl-base \
+    unzip \
+    vim && \
+    rm -rf /var/lib/apt/lists/*
+
+ENV OPT=/opt/vep
+ENV OPT_SRC=/opt/vep/src
+ENV PERL5LIB=:/opt/vep/src/bioperl-live
+ENV KENT_SRC=/opt/vep/src/kent-335_base/src
+ENV HTSLIB_DIR=/opt/vep/src/htslib
+
+ENV MACHTYPE=x86_64
+ENV DEPS=/opt/vep/src
+ENV PATH=/opt/vep/src/ensembl-vep:/opt/vep/src/var_c_code:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV LANG_VAR=en_US.UTF-8
+
+RUN useradd -r -m -U -d $OPT -s /bin/bash -c "VEP User" -p '' vep && usermod -a -G sudo vep && mkdir -p $OPT_SRC
+
+USER vep
+
+# Download VEP release_115.0
+FROM ensemblorg/ensembl-vep:release_115.2
+
+USER root
+
+ENV LC_ALL=en_US.UTF-8
+
+ENV LANG=en_US.UTF-8
+
+RUN apt-get update && apt-get install -y \
+    wget \
+    git \
+    libncurses5-dev \
+    libncursesw5-dev \
+    libbz2-dev \
+    liblzma-dev \
+    sqlite3 \
+    libsqlite3-dev \
+    cpanminus && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN cpanm DBD::SQLite
+
+RUN wget https://downloads.sourceforge.net/project/samtools/samtools/1.7/samtools-1.7.tar.bz2 && \
+tar xjvf samtools-1.7.tar.bz2 && \
+cd samtools-1.7 && \
+make && make install
+
+WORKDIR /opt/vep/
+
+# Git clone VEP PLUGINS
+RUN git clone https://github.com/Ensembl/VEP_plugins.git Plugins/
+
+# Git clone LOFTEE
+RUN git clone -b grch38 https://github.com/konradjk/loftee.git
+
+RUN mv /opt/vep/loftee/* /opt/vep/Plugins/
+
+USER vep
+
+
+
