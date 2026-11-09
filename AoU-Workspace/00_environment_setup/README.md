@@ -29,5 +29,3 @@ The notebooks should generally be executed in the following order:
 
 **These notebooks were designed to be executed within the All of Us Research Program Researcher Workbench prior to its transition to Verily.**
 **These scripts are no longer compatible with the current platform and should be considered historical documentation rather than functional setup instructions.**
-- Ensure that the appropriate Workspace Bucket is configured and accessible before executing the notebooks.
-- The PLINK 2 executable stored in the Workspace Bucket can be reused across subsequent `dsub` jobs without repeatedly downloading or installing the software.
