@@ -4,7 +4,7 @@ This directory contains Jupyter notebooks for preparing genotype data and calcul
 
 ## GRM Quality Control and Preparation
 
-### `02_04_grm_qc_step01.ipynb`
+### `02_01_grm_qc_step01.ipynb`
 
 - This notebook filters variants for inclusion in the genetic relationship matrix (GRM). Variants are removed if they are duplicated, multiallelic, non-single nucleotide variants (non-SNVs), or ambiguous.
 - Variants passing these filters are subsequently used for pruning the All of Us microarray data before calculating the GRM and performing principal component analysis (PCA).
