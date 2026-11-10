@@ -43,7 +43,7 @@ This directory contains Jupyter notebooks for preparing genotype data and calcul
 
 The notebooks should generally be executed in the following order:
 
-1. **`02_04_grm_qc_step01.ipynb`** – Filter variants for GRM construction.
+1. **`02_01_grm_qc_step01.ipynb`** – Filter variants for GRM construction.
 2. **`02_02_grm_qc_step02.ipynb`** – Perform ancestry-specific genotype filtering and LD pruning.
 3. **`02_03_grm_qc_step03.ipynb`** – Generate PLINK genotype files using the filtered variants.
 4. **`02_04_grm_qc_step04.ipynb`** – Calculate ancestry-specific sparse GRMs.
