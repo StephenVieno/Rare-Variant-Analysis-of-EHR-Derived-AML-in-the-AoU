@@ -50,6 +50,5 @@ The notebooks should generally be executed in the following order:
 
 ## Notes
 
-- These notebooks were developed for use within the All of Us Research Program Researcher Workbench prior to its transition to Verily.
-- These scripts are no longer compatible with the current platform and should be considered historical documentation rather than functional analysis instructions.
-- The resulting sparse GRMs were intended for use in downstream SAIGE-GENE+ rare-variant association analyses.
+- **These notebooks were developed for use within the All of Us Research Program Researcher Workbench prior to its transition to Verily.**
+- **These scripts are no longer compatible with the current platform and should be considered historical documentation rather than functional analysis instructions.**
