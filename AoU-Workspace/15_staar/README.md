@@ -55,14 +55,11 @@ Gene-centric association analyses are performed using STAAR to investigate the c
 - Evaluate rare coding variants using functional annotation information.
 - Incorporate annotation-weighted association testing.
 - Apply SPA-based null model adjustment.
-- Identify genes associated with EHR-derived AML.
 
 ## Execution
 
 The general execution order is:
 
-1. `Environment_DSUB.ipynb`
-2. `Setting_Env_Variables.ipynb`
 3. `15_00_conversion_to_bgen.ipynb`
 4. `15_01_conversion_to_gds.ipynb`
 5. `15_02_variant_info.ipynb`
