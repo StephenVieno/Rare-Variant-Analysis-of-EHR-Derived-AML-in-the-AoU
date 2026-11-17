@@ -14,9 +14,9 @@ The notebooks are organized sequentially according to the following steps:
 |---|---|
 | `12_01_hail_chip_variant_qc.ipynb` | Perform variant-level quality control using Hail to prepare genomic data for CHIP variant identification. |
 | `12_02_hail_chip_exclusion.ipynb` | Identify variants to be considered for exclusion based on CHIP-related criteria. |
-| `12_03_hail_chip_remove_variants.ipynb` | Remove identified CHIP-associated variants from the genomic dataset. |
+| `12_03_hail_chip_remove_variants.ipynb` | Remove variants identified through allele balance and read depth filtering from the genomic dataset. |
 | `12_04_hail_chip_reporting.ipynb` | Generate summary reports documenting the identified CHIP-associated variants and their exclusion. |
-| `12_05_hail_filter.ipynb` | Apply additional Hail filtering procedures to the genomic data. |
+| `12_05_hail_filter.ipynb` | Reapply variant-level quality control to the genomic dataset after excluding variants using allele balance and read depth filtering procedures. |
 | `12_06_hail_missing_check.ipynb` | Assess missingness following variant filtering and exclusion. |
 | `12_07_hail_update.ipynb` | Update variant identifiers in the genomic dataset following the preceding filtering and quality-control procedures. |
 | `12_08_hail_chip_hotspots.ipynb` | Identify and exclude established CHIP-associated hotspot variants. |
