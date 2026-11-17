@@ -66,5 +66,3 @@ The age-matching procedure should first be performed using `11_01_matching.ipynb
 The primary gene-based association analysis is performed using `11_02` through `11_05`, followed by rare single-variant association testing in `11_06`.
 
 The separate age-at-phenotype-ascertainment analysis is performed using `11_07` and `11_08`. Matching diagnostics and visualizations can be generated using `11_09_matching_plots.ipynb`.
-
-**Important:** Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily. As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
