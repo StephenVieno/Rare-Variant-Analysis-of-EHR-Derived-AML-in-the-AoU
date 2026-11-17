@@ -76,5 +76,3 @@ The general execution order is:
 The STAAR workflow incorporates functional annotation information to improve the power of rare-variant association testing. Gene-centric analyses evaluate the cumulative effects of rare coding variants within genes using annotation-weighted association tests.
 
 The analysis uses a logistic mixed-model framework to account for population structure and genetic relatedness, with saddlepoint approximation to improve statistical inference under case-control imbalance.
-
-**Important:** Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily. As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
