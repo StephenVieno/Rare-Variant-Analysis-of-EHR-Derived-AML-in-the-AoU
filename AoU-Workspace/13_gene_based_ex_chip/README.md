@@ -1,4 +1,4 @@
-# 13 – Gene-Based Association Analyses Excluding CHIP-Associated Variants
+# 13 – Gene-Based Tests Excluding CHIP-Associated Variants
 
 ## Overview
 
