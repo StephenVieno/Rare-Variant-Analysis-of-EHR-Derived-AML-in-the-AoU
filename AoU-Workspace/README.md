@@ -81,9 +81,9 @@ Individual folders contain the relevant scripts, notebooks, and documentation de
 
 ## Reproducibility and Data Availability
 
-- Analyses are conducted using data accessed through the All of Us Researcher Workbench.
-- **Some of the scripts available in this workspace were developed before the All of Us Research Program transitioned to Verily.**
-- **Consequently, modifications are required before these scripts can be reused within the current AoU Researcher Workbench environment.**
+- All analyses are conducted using data accessed through the All of Us (AoU) Researcher Workbench.
+- Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily.
+- As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
 
 ## Acknowledgements
 
