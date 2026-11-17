@@ -1,10 +1,10 @@
-# STAAR Rare Variant Association Analysis
+# 15 – STAAR Rare Variant Association Analyses
 
 ## Overview
 
-This directory contains the Jupyter notebooks used to perform rare variant association analyses using the **STAAR (variant-Set Test for Association using Annotation infoRmation)** framework in the All of Us (AoU) Research Program.
+This directory contains the Jupyter notebooks used to perform rare-variant association analyses using the **STAAR (variant-Set Test for Association using Annotation infoRmation)** framework in the All of Us (AoU) Research Program.
 
-The workflow processes whole-genome sequencing (WGS) data, prepares genotype and variant annotation files, constructs the genetic relatedness matrix, and performs gene-centric rare variant association analyses using the STAAR framework.
+The workflow processes whole-genome sequencing (WGS) data, prepares genotype and variant annotation files, constructs the genetic relatedness matrix, and performs gene-centric rare-variant association analyses using the STAAR framework.
 
 The primary objective is to identify associations between rare coding variants and electronic health record (EHR)-derived acute myeloid leukemia (AML).
 
@@ -18,30 +18,61 @@ The notebooks are organized into sequential stages, beginning with genotype data
 
 | Notebook | Description |
 |---|---|
-| [00_Conversion_To_BGEN.ipynb](00_Conversion_To_BGEN.ipynb) | Converts genotype data into BGEN format for downstream genetic analyses. |
-| [01_Conversion_To_GDS.ipynb](01_Conversion_To_GDS.ipynb) | Converts genotype data into Genomic Data Structure (GDS) format for use with the STAAR framework. |
+| `15_00_conversion_to_bgen.ipynb` | Convert genotype data into BGEN format for downstream genetic analyses. |
+| `15_01_conversion_to_gds.ipynb` | Convert genotype data into Genomic Data Structure (GDS) format for use with the STAAR framework. |
 
 ### 2. Variant Information and Annotation
 
 | Notebook | Description |
 |---|---|
-| [02_Variant_Info.ipynb](02_Variant_Info.ipynb) | Extracts and prepares variant-level information from the genotype data. |
-| [03_Annotate.ipynb](03_Annotate.ipynb) | Annotates genetic variants using functional and deleteriousness prediction information. |
-| [04_Variant_Info_GDS.ipynb](04_Variant_Info_GDS.ipynb) | Prepares and organizes variant information corresponding to the GDS genotype data for downstream analyses. |
+| `15_02_variant_info.ipynb` | Extract and prepare variant-level information from the genotype data. |
+| `15_03_variant_info_gds.ipynb` | Prepare and organize variant information corresponding to the GDS genotype data for downstream analyses. |
 
-### 3. Genetic Relatedness and Analysis Preparation
+### 3. Analysis Preparation and Null Model Fitting
 
 | Notebook | Description |
 |---|---|
-| [05_Sparse_GRM.ipynb](05_Sparse_GRM.ipynb) | Constructs the sparse genetic relatedness matrix (GRM) required for mixed-model association testing. |
-| [06_Preparation.ipynb](06_Preparation.ipynb) | Prepares phenotype, covariate, genotype, and annotation inputs required for STAAR analyses. |
-| [07_Null_Model_SPA.ipynb](07_Null_Model_SPA.ipynb) | Fits the null logistic mixed model incorporating the saddlepoint approximation (SPA) to account for case-control imbalance and population structure. |
+| `15_05_preparation.ipynb` | Prepare phenotype, covariate, genotype, and annotation inputs required for STAAR analyses. |
+| `15_06_null_model_spa.ipynb` | Fit the null logistic mixed model incorporating the saddlepoint approximation (SPA) to account for case-control imbalance and population structure. |
 
 ### 4. Rare Variant Association Analysis
 
 | Notebook | Description |
 |---|---|
-| [08_STAAR_Gene_Centric_Coding_SPA.ipynb](08_STAAR_Gene_Centric_Coding_SPA.ipynb) | Performs gene-centric rare coding variant association analyses using STAAR with SPA-based null model adjustment. |
+| `15_07_staar_gene_centric_coding_spa.ipynb` | Perform gene-centric rare coding variant association analyses using STAAR with SPA-based null model adjustment. |
+
+## Analysis Components
+
+### 1. Genotype Data Processing
+
+Whole-genome sequencing genotype data are converted into formats compatible with downstream STAAR analyses.
+
+- Convert genotype data into BGEN format.
+- Convert the resulting genotype data into GDS format.
+- Prepare the corresponding variant-level information for downstream analyses.
+
+### 2. Variant Information and Annotation
+
+Variant-level information is extracted and organized to support gene-centric rare-variant association testing.
+
+- Extract variant information from the genotype data.
+- Prepare variant information corresponding to the GDS dataset.
+- Organize genotype and annotation inputs for subsequent association analyses.
+
+### 3. Null Model Fitting
+
+The STAAR workflow uses a logistic mixed-model framework to account for population structure and genetic relatedness.
+
+The null model incorporates the saddlepoint approximation (SPA) to improve statistical inference under case-control imbalance.
+
+### 4. Gene-Centric Rare Variant Association Analysis
+
+Gene-centric association analyses are performed using STAAR to investigate the cumulative effects of rare coding variants within genes.
+
+- Evaluate rare coding variants using functional annotation information.
+- Incorporate annotation-weighted association testing.
+- Apply SPA-based null model adjustment.
+- Identify genes associated with EHR-derived AML.
 
 ## Environment Configuration
 
@@ -49,27 +80,27 @@ The following notebooks contain environment configuration and setup procedures f
 
 | Notebook | Description |
 |---|---|
-| [Environment_DSUB.ipynb](Environment_DSUB.ipynb) | Configures the computational environment and dependencies for executing analyses using `dsub`. |
-| [Setting_Env_Variables.ipynb](Setting_Env_Variables.ipynb) | Defines environment variables and workspace-specific configuration parameters required by the analysis pipeline. |
+| `Environment_DSUB.ipynb` | Configure the computational environment and dependencies for executing analyses using `dsub`. |
+| `Setting_Env_Variables.ipynb` | Define environment variables and workspace-specific configuration parameters required by the analysis pipeline. |
 
-## Execution Order
+## Execution
 
 The general execution order is:
 
 1. `Environment_DSUB.ipynb`
-2. `00_Conversion_To_BGEN.ipynb`
-3. `01_Conversion_To_GDS.ipynb`
-4. `02_Variant_Info.ipynb`
-5. `03_Annotate.ipynb`
-6. `04_Variant_Info_GDS.ipynb`
-7. `05_Sparse_GRM.ipynb`
-8. `06_Preparation.ipynb`
-9. `07_Null_Model_SPA.ipynb`
-10. `08_STAAR_Gene_Centric_Coding_SPA.ipynb`
+2. `Setting_Env_Variables.ipynb`
+3. `15_00_conversion_to_bgen.ipynb`
+4. `15_01_conversion_to_gds.ipynb`
+5. `15_02_variant_info.ipynb`
+6. `15_03_variant_info_gds.ipynb`
+7. `15_05_preparation.ipynb`
+8. `15_06_null_model_spa.ipynb`
+9. `15_07_staar_gene_centric_coding_spa.ipynb`
 
 ## Analysis Framework
 
-The STAAR workflow incorporates functional annotation information to improve the power of rare variant association testing. Gene-centric analyses evaluate the cumulative effects of rare coding variants within genes using annotation-weighted association tests.
+The STAAR workflow incorporates functional annotation information to improve the power of rare-variant association testing. Gene-centric analyses evaluate the cumulative effects of rare coding variants within genes using annotation-weighted association tests.
 
 The analysis uses a logistic mixed-model framework to account for population structure and genetic relatedness, with saddlepoint approximation to improve statistical inference under case-control imbalance.
 
+**Important:** Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily. As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
