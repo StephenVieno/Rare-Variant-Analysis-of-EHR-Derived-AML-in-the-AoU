@@ -12,23 +12,19 @@ The analysis is conducted within the AoU Researcher Workbench environment.
 
 ## Workflow
 
-The notebooks are organized into sequential stages, beginning with genotype data conversion and ending with gene-centric association testing.
+The notebooks are organized into sequential stages, beginning with environment configuration and genotype data conversion and ending with gene-centric association testing.
 
-### 1. Genotype Data Conversion
-
-Replace the separate **Workflow** and **Environment Configuration** tables with one consolidated table:
-
-| Notebook                                    | Description                                                                                |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `Environment_DSUB.ipynb`                    | Configure the dsub environment and required dependencies for executing the analysis.       |
-| `Setting_Env_Variables.ipynb`               | Define environment variables and workspace-specific configuration settings.                |
-| `15_00_conversion_to_bgen.ipynb`            | Convert WGS genotype data into BGEN format.                                                |
-| `15_01_conversion_to_gds.ipynb`             | Convert BGEN genotype data into GDS format for downstream STAAR analysis.                  |
-| `15_02_variant_info.ipynb`                  | Extract and prepare variant-level information required for STAAR analysis.                 |
-| `15_03_variant_info_gds.ipynb`              | Prepare variant information in the format required for integration with GDS genotype data. |
-| `15_05_preparation.ipynb`                   | Prepare phenotype, covariate, genotype, and annotation inputs for STAAR analysis.          |
-| `15_06_null_model_spa.ipynb`                | Fit the null logistic mixed model with saddlepoint approximation (SPA).                    |
-| `15_07_staar_gene_centric_coding_spa.ipynb` | Perform gene-centric rare coding variant association testing using STAAR with SPA.         |
+| **Notebook** | **Description** |
+|---|---|
+| `Environment_DSUB.ipynb` | Configure the computational environment and dependencies for executing analyses using `dsub`. |
+| `Setting_Env_Variables.ipynb` | Define environment variables and workspace-specific configuration settings required by the analysis pipeline. |
+| `15_00_conversion_to_bgen.ipynb` | Convert WGS genotype data into BGEN format. |
+| `15_01_conversion_to_gds.ipynb` | Convert BGEN genotype data into GDS format for downstream STAAR analysis. |
+| `15_02_variant_info.ipynb` | Extract and prepare variant-level information required for STAAR analysis. |
+| `15_03_variant_info_gds.ipynb` | Prepare variant information in the format required for integration with GDS genotype data. |
+| `15_04_preparation.ipynb` | Prepare phenotype, covariate, genotype, and annotation inputs for STAAR analysis. |
+| `15_05_null_model_spa.ipynb` | Fit the null logistic mixed model with saddlepoint approximation (SPA). |
+| `15_06_staar_gene_centric_coding_spa.ipynb` | Perform gene-centric rare coding variant association testing using STAAR with SPA. |
 
 ## Analysis Components
 
@@ -63,15 +59,6 @@ Gene-centric association analyses are performed using STAAR to investigate the c
 - Apply SPA-based null model adjustment.
 - Identify genes associated with EHR-derived AML.
 
-## Environment Configuration
-
-The following notebooks contain environment configuration and setup procedures for running the analysis within the AoU Researcher Workbench.
-
-| Notebook | Description |
-|---|---|
-| `Environment_DSUB.ipynb` | Configure the computational environment and dependencies for executing analyses using `dsub`. |
-| `Setting_Env_Variables.ipynb` | Define environment variables and workspace-specific configuration parameters required by the analysis pipeline. |
-
 ## Execution
 
 The general execution order is:
@@ -82,9 +69,9 @@ The general execution order is:
 4. `15_01_conversion_to_gds.ipynb`
 5. `15_02_variant_info.ipynb`
 6. `15_03_variant_info_gds.ipynb`
-7. `15_05_preparation.ipynb`
-8. `15_06_null_model_spa.ipynb`
-9. `15_07_staar_gene_centric_coding_spa.ipynb`
+7. `15_04_preparation.ipynb`
+8. `15_05_null_model_spa.ipynb`
+9. `15_06_staar_gene_centric_coding_spa.ipynb`
 
 ## Analysis Framework
 
