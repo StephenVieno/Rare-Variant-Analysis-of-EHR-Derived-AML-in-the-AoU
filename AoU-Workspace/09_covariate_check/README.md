@@ -72,7 +72,7 @@ The resulting PRS files are subsequently used as inputs for the logistic and Cox
 
 The final notebook, `09_05_aml_top_gene_based_results.ipynb`, consolidates the results generated across the different analytical approaches.
 
-**Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily.
-As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.**
+**Important:** Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily.
+As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
 
 
