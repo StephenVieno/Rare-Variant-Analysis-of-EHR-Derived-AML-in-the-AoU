@@ -40,12 +40,6 @@ Additional analyses investigate associations between individual rare genetic var
 
 These analyses provide a complementary assessment of variant-level associations alongside the gene-based results.
 
-### 4. Leave-One-Variant-Out (LOVO) Analysis
-
-LOVO analyses are performed to investigate the contribution of individual variants to gene-based associations with age at biospecimen collection.
-
-By evaluating gene-level associations after leaving out individual variants, these analyses help identify variants that may disproportionately contribute to an observed association signal.
-
 ## Execution
 
 The notebooks should generally be executed in numerical order, beginning with SAIGE-GENE+ Step 4 in `10_01_biospecimen_age_saige_gene_based_step04.ipynb`, followed by Step 5 in `10_02_biospecimen_age_saige_gene_based_step05.ipynb`.
