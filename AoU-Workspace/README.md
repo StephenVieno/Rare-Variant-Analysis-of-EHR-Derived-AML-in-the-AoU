@@ -85,13 +85,3 @@ The AoU Researcher Workbench is a controlled research environment. Access to the
 - Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily.
 - As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
 
-## Acknowledgements
-
-This work uses data from the **All of Us Research Program**.
-
-For further information about the program, visit the [All of Us Research Program](https://allofus.nih.gov/).
-
-For the complete analysis repository, see:
-
-[**Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU**](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU)
-
