@@ -54,7 +54,7 @@ The numbered folders are organized to reflect the general progression of the ana
 ### 4. Sensitivity analyses
 
 - **`09_covariate_check`**: Evaluate the influence of covariate selection and adjustment.
-- **`10_biospecimen_collection`**: Investigate the impact of biospecimen collection timing relative to AML diagnosis.
+- **`10_biospecimen_collection`**: Investigate the association between rare variants and the timing of biospecimen collection.
 - **`11_age_matching`**: Assess the robustness of associations following age matching.
 
 ### 5. CHIP-related sensitivity analyses
@@ -82,9 +82,7 @@ Individual folders contain the relevant scripts, notebooks, and documentation de
 ## Reproducibility and Data Availability
 
 - Analyses are conducted using data accessed through the All of Us Researcher Workbench.
-- Intermediate datasets and analytical outputs may be generated within the workspace during execution.
-- Software dependencies and computational requirements are specific to the AoU environment and individual analysis workflows.
-- Results should be interpreted in the context of the AML phenotype definition, genetic quality-control procedures, variant annotation, and statistical models used in each analysis.
+- **Some of the scripts available in this workspace were developed before the All of Us Research Program transitioned to Verily. Consequently, modifications are required before these scripts can be reused within the current AoU Researcher Workbench environment.**
 
 ## Acknowledgements
 
