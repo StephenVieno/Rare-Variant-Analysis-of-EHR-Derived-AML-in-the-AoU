@@ -1,4 +1,4 @@
-# 09 – Covariate and Sensitivity Analyses
+# 09 – Covariate Sensitivity Analyses
 
 ## Overview
 
