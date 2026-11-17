@@ -1,4 +1,4 @@
-# Acute Myeloid Leukemia (AML) Association Analysis – All of Us Research Program
+# Acute Myeloid Leukemia (AML) Association – All of Us Research Program
 
 ## Overview
 
