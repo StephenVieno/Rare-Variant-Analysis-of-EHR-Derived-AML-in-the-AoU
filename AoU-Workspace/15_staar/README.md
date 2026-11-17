@@ -16,30 +16,19 @@ The notebooks are organized into sequential stages, beginning with genotype data
 
 ### 1. Genotype Data Conversion
 
-| Notebook | Description |
-|---|---|
-| `15_00_conversion_to_bgen.ipynb` | Convert genotype data into BGEN format for downstream genetic analyses. |
-| `15_01_conversion_to_gds.ipynb` | Convert genotype data into Genomic Data Structure (GDS) format for use with the STAAR framework. |
+Replace the separate **Workflow** and **Environment Configuration** tables with one consolidated table:
 
-### 2. Variant Information and Annotation
-
-| Notebook | Description |
-|---|---|
-| `15_02_variant_info.ipynb` | Extract and prepare variant-level information from the genotype data. |
-| `15_03_variant_info_gds.ipynb` | Prepare and organize variant information corresponding to the GDS genotype data for downstream analyses. |
-
-### 3. Analysis Preparation and Null Model Fitting
-
-| Notebook | Description |
-|---|---|
-| `15_05_preparation.ipynb` | Prepare phenotype, covariate, genotype, and annotation inputs required for STAAR analyses. |
-| `15_06_null_model_spa.ipynb` | Fit the null logistic mixed model incorporating the saddlepoint approximation (SPA) to account for case-control imbalance and population structure. |
-
-### 4. Rare Variant Association Analysis
-
-| Notebook | Description |
-|---|---|
-| `15_07_staar_gene_centric_coding_spa.ipynb` | Perform gene-centric rare coding variant association analyses using STAAR with SPA-based null model adjustment. |
+| Notebook                                    | Description                                                                                |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `Environment_DSUB.ipynb`                    | Configure the dsub environment and required dependencies for executing the analysis.       |
+| `Setting_Env_Variables.ipynb`               | Define environment variables and workspace-specific configuration settings.                |
+| `15_00_conversion_to_bgen.ipynb`            | Convert WGS genotype data into BGEN format.                                                |
+| `15_01_conversion_to_gds.ipynb`             | Convert BGEN genotype data into GDS format for downstream STAAR analysis.                  |
+| `15_02_variant_info.ipynb`                  | Extract and prepare variant-level information required for STAAR analysis.                 |
+| `15_03_variant_info_gds.ipynb`              | Prepare variant information in the format required for integration with GDS genotype data. |
+| `15_05_preparation.ipynb`                   | Prepare phenotype, covariate, genotype, and annotation inputs for STAAR analysis.          |
+| `15_06_null_model_spa.ipynb`                | Fit the null logistic mixed model with saddlepoint approximation (SPA).                    |
+| `15_07_staar_gene_centric_coding_spa.ipynb` | Perform gene-centric rare coding variant association testing using STAAR with SPA.         |
 
 ## Analysis Components
 
