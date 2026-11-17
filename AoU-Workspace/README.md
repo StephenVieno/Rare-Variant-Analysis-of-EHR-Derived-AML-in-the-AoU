@@ -48,7 +48,7 @@ The numbered folders are organized to reflect the general progression of the ana
 - **`04_gene_based`**: Conduct gene-based rare-variant association analyses.
 - **`05_gauss`**: Perform GAUSS-based association analyses.
 - **`06_lovo`**: Investigate individual variant contributions to gene-level association signals.
-- **`07_gene_set`**: Investigate associations across predefined gene sets and biological pathways.
+- **`07_gene_set`**: Investigate rare-variant burden associations across predefined gene sets and biological pathways.
 - **`08_common_gwas`**: Conduct common-variant genome-wide association analyses.
 
 ### 4. Sensitivity analyses
