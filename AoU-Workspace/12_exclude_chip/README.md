@@ -12,7 +12,7 @@ The notebooks are organized sequentially according to the following steps:
 
 | Notebook | Description |
 |---|---|
-| `12_01_hail_chip_variant_qc.ipynb` | Perform variant-level quality control using Hail to prepare genomic data for CHIP variant identification. |
+| `12_00_hail_subset_plink.ipynb` | Subset the genomic dataset for subsequent CHIP-related quality control filtering. |
 | `12_01_hail_chip_variant_qc.ipynb` | Perform variant-level quality control using Hail to prepare genomic data for CHIP variant identification. |
 | `12_02_hail_chip_exclusion.ipynb` | Identify variants to be considered for exclusion based on CHIP-related criteria. |
 | `12_03_hail_chip_remove_variants.ipynb` | Remove variants identified through allele balance and read depth filtering from the genomic dataset. |
