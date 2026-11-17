@@ -19,8 +19,8 @@ The notebooks are organized into sequential stages, beginning with environment c
 | `15_00_conversion_to_bgen.ipynb` | Convert WGS genotype data into BGEN format. |
 | `15_01_conversion_to_gds.ipynb` | Convert BGEN genotype data into GDS format for downstream STAAR analysis. |
 | `15_02_variant_info.ipynb` | Extract and prepare variant-level information required for STAAR analysis. |
-| `15_03_variant_info_gds.ipynb` | Prepare variant information in the format required for integration with GDS genotype data. |
-| `15_04_preparation.ipynb` | Prepare phenotype, covariate, genotype, and annotation inputs for STAAR analysis. |
+| `15_03_variant_info_gds.ipynb` | Annotate the GDS genotype data using FAVOR annotations. |
+| `15_04_preparation.ipynb` | Prepare additional file inputs for STAAR analysis. |
 | `15_05_null_model_spa.ipynb` | Fit the null logistic mixed model with saddlepoint approximation (SPA). |
 | `15_06_staar_gene_centric_coding_spa.ipynb` | Perform gene-centric rare coding variant association testing using STAAR with SPA. |
 
