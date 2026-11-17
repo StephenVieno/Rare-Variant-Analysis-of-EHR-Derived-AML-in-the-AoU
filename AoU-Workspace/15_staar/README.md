@@ -16,8 +16,6 @@ The notebooks are organized into sequential stages, beginning with environment c
 
 | **Notebook** | **Description** |
 |---|---|
-| `Environment_DSUB.ipynb` | Configure the computational environment and dependencies for executing analyses using `dsub`. |
-| `Setting_Env_Variables.ipynb` | Define environment variables and workspace-specific configuration settings required by the analysis pipeline. |
 | `15_00_conversion_to_bgen.ipynb` | Convert WGS genotype data into BGEN format. |
 | `15_01_conversion_to_gds.ipynb` | Convert BGEN genotype data into GDS format for downstream STAAR analysis. |
 | `15_02_variant_info.ipynb` | Extract and prepare variant-level information required for STAAR analysis. |
