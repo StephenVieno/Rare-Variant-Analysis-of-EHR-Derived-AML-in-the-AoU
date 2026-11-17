@@ -18,7 +18,7 @@ The notebooks are organized according to the following analytical steps:
 | `10_02_biospecimen_age_saige_gene_based_step05.ipynb` | Perform SAIGE-GENE+ gene-based association testing, modelling age at biospecimen collection as the outcome. |
 | `10_03_biospecimen_age_qq_plot.ipynb` | Generate quantile-quantile (QQ) plots to assess the distribution of gene-based association test statistics and evaluate potential deviations from the expected null distribution. |
 | `10_04_biospecimen_age_rare_single_variant_assoc.ipynb` | Investigate rare single-variant associations with age at biospecimen collection. |
-| `10_05_biospecimen_age_lovo_step02.ipynb` | Perform SAIGE-GENE+ leave-one-variant-out (LOVO) analysis to investigate the contribution of individual variants to gene-based associations with age at biospecimen collection. |
+| `10_05_biospecimen_age_gene_based_ex_assoc_step02.ipynb` | Perform SAIGE-GENE+ gene-based association testing after excluding significant rare single variants to investigate their contribution to the observed gene-based associations with age at biospecimen collection. |
 
 ## Analysis Components
 
