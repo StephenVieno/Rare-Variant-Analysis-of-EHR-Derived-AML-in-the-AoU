@@ -19,7 +19,7 @@ The numbered folders organize the analysis into individual stages, with each fol
 | `04_gene_based` | Primary gene-based rare-variant association analyses investigating the relationship between protein-coding variation and AML susceptibility. |
 | `05_gauss` | GAUSS-based association analyses. |
 | `06_lovo` | Leave-one-variant-out (LOVO) analyses to investigate the contribution of individual variants to gene-level association signals. |
-| `07_gene_set` | Gene-set association analyses to investigate the enrichment of genetic associations across predefined biological pathways and gene sets. |
+| `07_gene_set` | Gene-set burden association analyses to investigate the enrichment of genetic associations across predefined biological pathways and gene sets. |
 | `08_common_gwas` | Genome-wide association analyses of common genetic variants associated with AML. |
 | `09_covariate_check` | Assessment of covariate selection and adjustment in the association models. |
 | `10_biospecimen_collection` | Sensitivity analyses incorporating biospecimen collection timing relative to the recorded AML diagnosis. |
