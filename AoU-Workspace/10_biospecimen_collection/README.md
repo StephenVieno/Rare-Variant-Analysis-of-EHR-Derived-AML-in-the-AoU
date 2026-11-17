@@ -14,8 +14,8 @@ The notebooks are organized according to the following analytical steps:
 
 | Notebook | Description |
 |---|---|
-| `10_01_biospecimen_age_saige_gene_based_step04.ipynb` | Prepare the SAIGE-GENE+ gene-based association analysis using age at biospecimen collection as the outcome. Perform Step 4 to prepare the inputs required for the subsequent association analysis. |
-| `10_02_biospecimen_age_saige_gene_based_step05.ipynb` | Perform SAIGE-GENE+ gene-based association testing (Step 5), modelling age at biospecimen collection as the outcome. |
+| `10_01_biospecimen_age_saige_gene_based_step04.ipynb` | Fit the null model for SAIGE-GENE+ gene-based association testing, modelling age at biospecimen collection as the outcome. |
+| `10_02_biospecimen_age_saige_gene_based_step05.ipynb` | Perform SAIGE-GENE+ gene-based association testing, modelling age at biospecimen collection as the outcome. |
 | `10_03_biospecimen_age_qq_plot.ipynb` | Generate quantile-quantile (QQ) plots to assess the distribution of gene-based association test statistics and evaluate potential deviations from the expected null distribution. |
 | `10_04_biospecimen_age_rare_single_variant_assoc.ipynb` | Investigate rare single-variant associations with age at biospecimen collection. |
 | `10_05_biospecimen_age_lovo_step02.ipynb` | Perform SAIGE-GENE+ leave-one-variant-out (LOVO) analysis to investigate the contribution of individual variants to gene-based associations with age at biospecimen collection. |
@@ -51,5 +51,3 @@ By evaluating gene-level associations after leaving out individual variants, the
 The notebooks should generally be executed in numerical order, beginning with SAIGE-GENE+ Step 4 in `10_01_biospecimen_age_saige_gene_based_step04.ipynb`, followed by Step 5 in `10_02_biospecimen_age_saige_gene_based_step05.ipynb`.
 
 The resulting gene-based association statistics are subsequently evaluated using QQ plots, rare single-variant association testing, and LOVO analyses.
-
-**Important:** Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily. As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
