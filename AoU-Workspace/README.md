@@ -77,8 +77,7 @@ The numbered directories provide a logical organization of the analysis stages. 
 
 **Important:** The AoU Researcher Workbench is a controlled research environment. Access to the underlying genomic and EHR data requires appropriate AoU authorization. The repository contains analysis code and workflows rather than unrestricted copies of participant-level data.
 
-- Certain scripts require a corresponding Docker image to be built and published to a publicly accessible repository on Docker Hub.
-- These Docker images can then be pulled and executed using the `dsub` command on virtual machines (VMs) within the All of Us Researcher Workbench.
+**Importantt:** Certain scripts require a corresponding Docker image to be built and published to a publicly accessible repository on Docker Hub. These Docker images can then be pulled and executed using the `dsub` command on virtual machines (VMs) within the All of Us Researcher Workbench.
 
 ## Reproducibility and Data Availability
 
