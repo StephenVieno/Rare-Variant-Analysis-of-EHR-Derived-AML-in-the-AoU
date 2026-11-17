@@ -6,7 +6,7 @@ This directory contains the computational workflows used to conduct genetic asso
 
 The analyses integrate electronic health record (EHR)-derived AML phenotypes with whole-genome sequencing (WGS) data to investigate associations between genetic variation and AML susceptibility. The workflows include phenotype definition, genetic relatedness estimation, variance ratio estimation, gene-based association testing, gene-set analyses, common-variant GWAS, and a series of sensitivity analyses addressing potential confounding from clonal hematopoiesis of indeterminate potential (CHIP).
 
-The numbered folders organize the analysis into individual stages, with each folder containing the corresponding notebooks, scripts, and intermediate or final outputs.
+The numbered folders organize the analysis into individual stages, with each folder containing the corresponding notebooks and scripts.
 
 ## Repository Structure
 
