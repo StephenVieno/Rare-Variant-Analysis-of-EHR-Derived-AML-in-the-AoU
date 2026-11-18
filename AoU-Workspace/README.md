@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains the computational workflows used to conduct genetic association analyses of acute myeloid leukemia (AML) within the **All of Us (AoU) Research Program** Researcher Workbench.
+This directory contains the computational workflows used to conduct genetic association analyses of acute myeloid leukemia (AML) within the All of Us (AoU) Research Program Researcher Workbench.
 
 The analyses integrate electronic health record (EHR)-derived AML phenotypes with whole-genome sequencing (WGS) data to investigate associations between genetic variation and AML susceptibility. The workflows include phenotype definition, genetic relatedness estimation, variance ratio estimation, gene-based association testing, gene-set analyses, common-variant GWAS, and a series of sensitivity analyses addressing potential confounding from clonal hematopoiesis of indeterminate potential (CHIP).
 
