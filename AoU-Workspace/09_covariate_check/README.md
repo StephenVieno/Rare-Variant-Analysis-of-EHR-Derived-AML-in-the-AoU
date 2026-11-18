@@ -21,7 +21,7 @@ The notebooks are organized according to the following analytical steps:
 | `09_05_aml_top_gene_based_results.ipynb` | Consolidate and evaluate the top gene-based association results across the sensitivity analyses. |
 | `09_06_aml_additional_covariates_file.ipynb`               | Generate an updated phenotype file incorporating additional covariates, including biospecimen collection age, age squared, age-by-biospecimen collection interaction, and age-by-sex interaction terms. |
 | `09_07_aml_check_covariates_saige_gene_based_step04.ipynb` | Fit the SAIGE-GENE+ null model using the updated phenotype and covariate file, incorporating the additional covariates and interaction terms.                                                           |
-| `09_08_aml_check_covariates_saige_gene_based_step05.ipynb` | Perform SAIGE-GENE+ gene-based association tests using the fitted null model to evaluate the association of the top-priority genes with AML.                                                            |
+| `09_08_aml_check_covariates_saige_gene_based_step05.ipynb` | Perform SAIGE-GENE+ gene-based association tests using the fitted null model to evaluate the association of the top-identified genes with AML.                                                            |
 
 ## Analysis Components
 
@@ -73,7 +73,7 @@ The notebooks should generally be executed in numerical order, beginning with th
 
 The resulting PRS files are subsequently used as inputs for the logistic and Cox regression sensitivity analyses.
 
-The final notebook, `09_05_aml_top_gene_based_results.ipynb`, consolidates the results generated across the different analytical approaches.
+The final notebook, `09_08_aml_check_covariates_saige_gene_based_step05.ipynb`, consolidates the results generated across the different analytical approaches.
 
 **Important:** Some scripts included in this workspace were developed prior to the All of Us Research Program's transition to Verily.
 As a result, these scripts may require modifications to ensure compatibility with the current AoU Researcher Workbench environment.
