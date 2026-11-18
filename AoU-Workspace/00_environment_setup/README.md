@@ -1,4 +1,4 @@
-# 0 - Workspace Environment Setup
+# 0 – Workspace Environment Setup
 
 This directory contains Jupyter notebooks for configuring the computational environment within the All of Us (AoU) Research Program Researcher Workbench. These notebooks establish the tools and dependencies required for downstream genomic analyses, including computational workflows using `dsub` and genetic data processing with PLINK 2.
 
