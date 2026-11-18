@@ -1,22 +1,13 @@
-# Workspace Environment Setup
+# 0 - Workspace Environment Setup
 
-This directory contains Jupyter notebooks for configuring the computational environment within the All of Us (AoU) Research Program Researcher Workbench. These scripts establish the necessary tools and dependencies for downstream genomic analyses, including running computational workflows through `dsub` and performing genetic data processing with PLINK 2.
+This directory contains Jupyter notebooks for configuring the computational environment within the All of Us (AoU) Research Program Researcher Workbench. These notebooks establish the tools and dependencies required for downstream genomic analyses, including computational workflows using `dsub` and genetic data processing with PLINK 2.
 
 ## Notebooks
 
-### 1. `00_01_environment_dsub.ipynb`
-
-- This notebook configures the `dsub` environment within the AoU Researcher Workbench Jupyter environment. The script was originally provided by the All of Us Research Program to facilitate the setup and use of `dsub` for submitting computational jobs.
-- It installs and configures the necessary components for submitting and managing computational workflows through the AoU Researcher Workbench.
-- If an error occurs during execution, it may reflect changes to the AoU environment, updates to the `dsub` system, or modifications to the installation commands and workspace configuration. In such cases, consult the latest AoU documentation for updated setup instructions.
-
-### 2. `00_02_environment_plink2.ipynb`
-
-- This notebook downloads the latest available PLINK 2 release for Linux within the AoU Researcher Workbench and uploads the executable to the Google Cloud Platform (GCP) Workspace Bucket.
-- Storing PLINK 2 in the Workspace Bucket allows the executable to be copied directly into the working environment of individual `dsub` jobs, making it available for downstream genetic data processing and quality control.
-- This approach avoids the need to initialize a separate Docker image for PLINK 2, reducing computational overhead and associated costs.
-- The notebook also verifies the downloaded executable by checking its version number to confirm that the expected release has been installed successfully.
-- To update PLINK 2, modify the download URL to point to the desired release, rerun the notebook, and verify the installed version.
+| Notebook | Description |
+|---|---|
+| [00_01_environment_dsub.ipynb](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/blob/main/AoU-Workspace/00_environment_setup/00_01_environment_dsub.ipynb) | Configures the `dsub` environment within the AoU Researcher Workbench Jupyter environment. Originally provided by the All of Us Research Program, this notebook installs and configures the components required to submit and manage computational workflows through `dsub`. |
+| [00_02_environment_plink2.ipynb](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/blob/main/AoU-Workspace/00_environment_setup/00_02_environment_plink2.ipynb) | Downloads the latest available Linux release of PLINK 2 and uploads the executable to the Google Cloud Platform (GCP) Workspace Bucket. This allows PLINK 2 to be copied directly into individual `dsub` job environments without requiring a separate Docker image, reducing computational overhead and associated costs. The notebook also verifies the executable by checking its version number. |
 
 ## Execution Order
 
@@ -27,5 +18,4 @@ The notebooks should generally be executed in the following order:
 
 ## Notes
 
-**These notebooks were designed to be executed within the All of Us Research Program Researcher Workbench prior to its transition to Verily.**
-**These scripts are no longer compatible with the current platform and should be considered historical documentation rather than functional setup instructions.**
+These notebooks were designed for execution within the All of Us Research Program Researcher Workbench prior to its transition to Verily. **They are no longer compatible with the current platform and should be considered historical documentation rather than functional setup instructions.**
