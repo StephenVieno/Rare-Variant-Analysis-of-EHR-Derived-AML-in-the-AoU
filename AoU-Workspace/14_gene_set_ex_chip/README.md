@@ -1,4 +1,4 @@
-# 14 – Exome-Wide Gene-Set Burden Analyses Excluding CHIP-Associated Genes
+# 14 – Gene-Set Burden Analyses Excluding CHIP-Associated Genes
 
 ## Overview
 
