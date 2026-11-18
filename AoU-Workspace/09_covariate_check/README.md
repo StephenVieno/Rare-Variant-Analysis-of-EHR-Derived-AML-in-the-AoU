@@ -19,6 +19,9 @@ The notebooks are organized according to the following analytical steps:
 | `09_03_aml_top_genes_with_covariates_sensitivity_analysis.ipynb` | Repeat logistic and Cox regression analyses incorporating additional covariates, specifically smoking status and prior exposure to alkylating agents before the first EHR diagnosis of AML. |
 | `09_04_aml_top_genes_with_deprivation_index_sensitivity_analysis.ipynb` | Perform additional logistic and Cox regression sensitivity analyses incorporating the overall socioeconomic deprivation index or its individual components as covariates. |
 | `09_05_aml_top_gene_based_results.ipynb` | Consolidate and evaluate the top gene-based association results across the sensitivity analyses. |
+| `09_06_aml_additional_covariates_file.ipynb`               | Generate an updated phenotype file incorporating additional covariates, including biospecimen collection age, age squared, age-by-biospecimen collection interaction, and age-by-sex interaction terms. |
+| `09_07_aml_check_covariates_saige_gene_based_step04.ipynb` | Fit the SAIGE-GENE+ null model using the updated phenotype and covariate file, incorporating the additional covariates and interaction terms.                                                           |
+| `09_08_aml_check_covariates_saige_gene_based_step05.ipynb` | Perform SAIGE-GENE+ gene-based association tests using the fitted null model to evaluate the association of the top-priority genes with AML.                                                            |
 
 ## Analysis Components
 
