@@ -1,4 +1,4 @@
-# Phenotype Scripts
+# 1 – Phenotype Scripts
 
 This directory contains Jupyter notebooks for defining and characterizing the electronic health record (EHR)-derived acute myeloid leukemia (AML) phenotype in the All of Us (AoU) Research Program. These scripts generate phenotype files for downstream rare-variant association analyses, calculate relevant demographic and clinical variables, and evaluate phenotype distributions and timing of AML diagnoses.
 
