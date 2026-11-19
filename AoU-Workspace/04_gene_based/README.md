@@ -1,52 +1,38 @@
-# Annotation Sensitivity Pipeline 
-### AML-Annotation-Threshold-Analysis.ipynb
-- This script submits SAIGE-GENE+ rare variant set-based gene association analyses for four different annotation groups. On the smallest chromosome, chromosome 21, this was performed as part of a sensitivity analysis to determine the optimal threshold for each category to be used in the main analysis. Specifically, this included determining the threshold for LOFTEE to classify loss-of-function variants, the threshold for SpliceAI scores to identify splicing variants, the threshold for AlphaMissense scores to classify missense variants, and the use of synonymous variants as a negative control.
-   - Annotation Script: [Single-Class-Annotations.py](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/tree/main/Local-Workspace/Annotation-Scripts)
+# 4 – Gene-Based Association Analysis
 
-### AML-Annotation-Threshold-Manhattan-Plot.ipynb
-- This script plots the results from the annotation sensitivity analysis to demonstrate which thresholds are optimal for each variant annotation category. In the AML results, the optimal thresholds were determined as follows:
+This directory contains Jupyter notebooks for performing rare variant gene-based association analyses using SAIGE-GENE+. The pipeline includes annotation threshold sensitivity analyses, variance ratio estimation, null model fitting, gene-based association testing, and visualization of association results. Additional analyses evaluate the effects of deprivation index adjustment and alternative cohort and age definitions.
 
-   - high-confidence loss-of-function variants from LOFTEE for the loss-of-function category;
-   - SpliceAI scores greater than 0.8 for splice variants;
-   - AlphaMissense scores greater than 0.546 for missense variants;
-   - and synonymous variants identified by VEP with SpliceAI scores less than 0.5 for the synonymous category.
+## Notebooks
 
-# SAIGE-GENE+ Set-based Association Pipeline
-### AML-SAIGE-GENE-Set-Based-Step01.ipynb
-- This script calculates variant minor allele counts from the genomic PLINK file used to generate the sparse Genetic Relationship Matrix (GRM). Before computing the counts, the PLINK file is subsetted to exclude samples that were not used in constructing the sparse GRM.
+| **Notebook** | **Description** |
+|---|---|
+| `04_01_annotation_threshold_check.ipynb` | Performs SAIGE-GENE+ rare variant set-based association analyses using four variant annotation categories on chromosome 21 as part of an annotation threshold sensitivity analysis. The analysis evaluates LOFTEE loss-of-function classifications, SpliceAI splicing scores, AlphaMissense missense scores, and synonymous variants as a negative control. |
+| `04_02_annotation_threshold_manhattan_plot.ipynb` | Generates Manhattan plots summarizing the annotation threshold sensitivity analyses to evaluate alternative thresholds for each variant annotation category. The selected thresholds include high-confidence LOFTEE variants, SpliceAI scores greater than 0.8, AlphaMissense scores greater than 0.546, and synonymous variants identified using VEP with SpliceAI scores below 0.5. |
+| `04_03_aml_manhattan_maf_threshold_plot.ipynb` | Generates Manhattan plots stratified by minor allele frequency (MAF) thresholds to evaluate the impact of allele frequency thresholds on AML gene-based association results. |
+| `04_04_aml_saige_gene_based_step04.ipynb` | Fits the null model for SAIGE-GENE+ set-based association analyses using the sparse genetic relationship matrix (GRM), randomly selected variants across specified minor allele count (MAC) categories, and the AML phenotype file with covariates. |
+| `04_05_aml_saige_gene_based_step05.ipynb` | Performs chromosome-specific rare variant gene-based association tests using SAIGE-GENE+. The analysis evaluates maximum MAF thresholds of 1%, 0.1%, and 0.001% across missense, loss-of-function, and combined missense and loss-of-function annotation categories. Synonymous variants are analyzed separately as a negative control. |
+| `04_06_aml_deprivation_index_saige_gene_based_step04.ipynb` | Fits the SAIGE-GENE+ null model using the phenotype file incorporating the deprivation index as an additional covariate. |
+| `04_07_aml_deprivation_index_saige_gene_based_step05.ipynb` | Performs chromosome-specific SAIGE-GENE+ rare variant gene-based association tests using the phenotype file incorporating the deprivation index. The analysis evaluates the same annotation categories and MAF thresholds as the primary analysis. |
+| `04_08_aml_qq_plot.ipynb` | Generates quantile–quantile (QQ) plots to evaluate the calibration of gene-based association test p-values and assess potential genomic inflation. |
+| `04_09_genomic_inflation.ipynb` | Calculates genomic inflation statistics to assess the calibration of gene-based association results. |
+| `04_10_aml_manhattan_plot.ipynb` | Generates standard Manhattan plots to visualize gene-based association signals across chromosomes. |
+| `04_11_manhattan_cauchy_plot.ipynb` | Generates Manhattan plots using Cauchy-combined p-values to visualize aggregated association signals across multiple tests or annotation categories. |
+| `04_12_aml_deprivation_index_saige_gene_based_step04.ipynb` | Fits the SAIGE-GENE+ null model for the deprivation index analysis using the corresponding phenotype file, sparse GRM, and randomly selected variants across specified MAC categories. |
+| `04_13_aml_deprivation_index_saige_gene_based_step05.ipynb` | Performs chromosome-specific SAIGE-GENE+ rare variant gene-based association tests for the deprivation index analysis using the corresponding null model. |
+| `04_14_aml_correlation_check_plot.ipynb` | Evaluates correlations between gene-based association summary statistics from analyses with and without adjustment for the deprivation index to assess the impact of covariate adjustment on association results. |
+| `04_15_age_definition_saige_gene_based_step04.ipynb` | Fits the SAIGE-GENE+ null model using the alternative age definition incorporated into the AML phenotype file. |
+| `04_16_age_definition_saige_gene_based_step05.ipynb` | Performs chromosome-specific SAIGE-GENE+ rare variant gene-based association tests using the alternative age definition and its corresponding null model. |
+| `04_17_aml_top_gene_plot.ipynb` | Generates visualizations of the top genes identified in the AML gene-based association analyses. |
+| `04_18_aml_top_gene_synonymous_plot.ipynb` | Generates visualizations of the top genes identified in the synonymous variant analyses, providing a comparison with the predicted deleterious variant results. |
+| `04_19_combined_supplementary_plots.ipynb` | Generates combined supplementary visualizations summarizing the gene-based association analysis results. |
+| `04_20_aml_restricted_cohort_saige_gene_based_step04.ipynb` | Fits the SAIGE-GENE+ null model using the restricted AML cohort phenotype definition. |
+| `04_21_aml_restricted_cohort_saige_gene_based_step05.ipynb` | Performs chromosome-specific SAIGE-GENE+ rare variant gene-based association tests using the restricted AML cohort and its corresponding null model. |
 
-### AML-SAIGE-GENE-Set-Based-Step02.ipynb
-- This script generates a list of 2,000 randomly selected variants for variance ratio estimation in SAIGE-GENE set-based analysis. Multiple variance ratios must be estimated based on different minor allele count (MAC) categories when –isCateVarianceRatio=TRUE. This differs from Step 1 in SAIGE for single-variant tests, where only a single variance ratio is estimated. By default, two variance ratios are estimated for the categories 10 ≤ MAC < 20 and MAC ≥ 20.
+## Notes
 
-### AML-SAIGE-GENE-Set-Based-Step03.ipynb
-- This script creates the PLINK file used for variance ratio estimation. Note that the file must contain at least 200 variants with MAC values falling within the specified categories. This PLINK file is used only for variance ratio estimation and contains random markers extracted from the LD-pruned PLINK file used for constructing the GRM and performing variance ratio estimation.
-
-### AML-SAIGE-GENE-Set-Based-Step04.ipynb
-- The following script is used to fit the null model for the set-based SAIGE-GENE analysis. The options useSparseGRMtoFitNULL, useSparseGRMforVarRatio, and isCateVarianceRatio must be set to TRUE. This script uses the sparse GRM, 2,000 randomly selected variants in the specified MAC categories, and the phenotype file with covariates to fit the null model.
-
-### AML-SAIGE-GENE-Set-Based-Step05.ipynb
-- This script performs rare variant set-based gene association tests for each chromosome using SAIGE-GENE+. It is configured to use the sparse GRM with 2,000 randomly selected markers to estimate the variance ratio. Maximum minor allele frequency thresholds for each test are set at 1%, 0.1%, and 0.001%. The script evaluates the annotation groups Missense, Loss-of-Function, and a combination of Missense and Loss-of-Function. An additional analysis is conducted using only synonymous variants; this is executed with a separate command so that the Cauchy values from the first test reflect only predicted deleterious variants (Missense and Loss-of-Function).
-
-### AML-SAIGE-GENE-Set-Based-Step04-Deprivation-Index.ipynb
-- The following script is used to fit the null model for the set-based SAIGE-GENE analysis. The options useSparseGRMtoFitNULL, useSparseGRMforVarRatio, and isCateVarianceRatio must be set to TRUE. This script uses the sparse GRM, 2,000 randomly selected variants in the specified MAC categories, and the phenotype file with covariates to fit the null model.
-
-### AML-SAIGE-GENE-Set-Based-Step05-Deprivation-Index.ipynb
-- This script performs rare variant set-based gene association tests for each chromosome using SAIGE-GENE+. It is configured to use the sparse GRM with 2,000 randomly selected markers to estimate the variance ratio. Maximum minor allele frequency thresholds for each test are set at 1%, 0.1%, and 0.001%. The script evaluates the annotation groups Missense, Loss-of-Function, and a combination of Missense and Loss-of-Function. An additional analysis is conducted using only synonymous variants; this is executed with a separate command so that the Cauchy values from the first test reflect only predicted deleterious variants (Missense and Loss-of-Function).
-
-### AML-SAIGE-GENE-Set-Based-Step04-Deprivation.ipynb
-- The following script is used to fit the null model for the set-based SAIGE-GENE analysis. The options useSparseGRMtoFitNULL, useSparseGRMforVarRatio, and isCateVarianceRatio must be set to TRUE. This script uses the sparse GRM, 2,000 randomly selected variants in the specified MAC categories, and the phenotype file with covariates to fit the null model.
-
-### AML-SAIGE-GENE-Set-Based-Step05-Deprivation.ipynb
-- This script performs rare variant set-based gene association tests for each chromosome using SAIGE-GENE+. It is configured to use the sparse GRM with 2,000 randomly selected markers to estimate the variance ratio. Maximum minor allele frequency thresholds for each test are set at 1%, 0.1%, and 0.001%. The script evaluates the annotation groups Missense, Loss-of-Function, and a combination of Missense and Loss-of-Function. An additional analysis is conducted using only synonymous variants; this is executed with a separate command so that the Cauchy values from the first test reflect only predicted deleterious variants (Missense and Loss-of-Function).
-
-# SAIGE-GENE+ Set-based Association Plot Scripts 
-### AML-Manhattan-Plot.ipynb 
-– This script generates a standard Manhattan plot to visualize genome-wide association signals across chromosomes.
-### AML-Manhattan-Cauchy-Plot.ipynb 
-– This script produces a Manhattan plot based on Cauchy-combined p-values, enabling aggregation of multiple tests or models into a single association signal.
-### AML-Manhattan-MAF-Threshold-Plot.ipynb 
-– This script creates Manhattan plots stratified or filtered by minor allele frequency (MAF) thresholds to evaluate the impact of allele frequency on association signals.
-### AML-QQ-Plot.ipynb 
-– This script generates quantile–quantile (QQ) plots to assess p-value calibration, inflation, and potential population stratification.
-### AML-Correlation-Check-Plot.ipynb 
-– This script visualizes correlations among summary statistics (comparing analyses with and without inclusion of the deprivation index) to identify differences in genetic signals.
+- The primary SAIGE-GENE+ analyses use a sparse GRM and categorical variance ratio estimation.
+- Variance ratios are estimated using randomly selected variants across the specified MAC categories.
+- The primary gene-based association analyses evaluate MAF thresholds of 1%, 0.1%, and 0.001% across missense, loss-of-function, and combined annotation categories.
+- Synonymous variants are analyzed separately as a negative control.
+- Additional analyses evaluate the effects of deprivation index adjustment, alternative age definitions, and restricted AML cohort selection.
+- These notebooks were developed for use within the All of Us Research Program Researcher Workbench prior to its transition to Verily. Some scripts may no longer be compatible with the current platform and should be considered historical documentation rather than functional analysis instructions.
