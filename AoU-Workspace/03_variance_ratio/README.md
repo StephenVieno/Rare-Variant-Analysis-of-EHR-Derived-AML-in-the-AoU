@@ -7,7 +7,7 @@ This directory contains Jupyter notebooks for preparing the genotype data requir
 | **Notebook** | **Description** |
 |---|---|
 | `03_01_aml_saige_gene_based_step01.ipynb` | Calculates variant minor allele counts (MAC) from the PLINK genotype data used to construct the sparse genetic relationship matrix (GRM). Before calculating allele counts, the PLINK dataset is restricted to individuals included in the sparse GRM. |
-| `03_02_aml_saige_gene_based_step02.ipynb` | Generates a set of 2,000 randomly selected variants for variance ratio estimation in SAIGE-GENE+ set-based association analyses. When `isCateVarianceRatio=TRUE`, separate variance ratios are estimated for different MAC categories. By default, two variance ratios are estimated for variants with \(10 \leq MAC < 20\) and \(MAC \geq 20\). |
+| `03_02_aml_saige_gene_based_step02.ipynb` | Generates a set of 2,000 randomly selected variants for variance ratio estimation in SAIGE-GENE+ set-based association analyses. When `isCateVarianceRatio=TRUE`, separate variance ratios are estimated for different MAC categories.  |
 | `03_03_aml_saige_gene_based_step03.ipynb` | Generates the PLINK genotype files used for variance ratio estimation. The resulting dataset must contain at least 200 variants within each specified MAC category. Variants are randomly selected from the LD-pruned PLINK dataset used for sparse GRM construction and variance ratio estimation. |
 
 ## Notes
