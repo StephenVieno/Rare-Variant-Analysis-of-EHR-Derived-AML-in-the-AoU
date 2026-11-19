@@ -1,9 +1,17 @@
-# SAIGE-GENE+ Set-based Association Pipeline
-### AML-SAIGE-GENE-Set-Based-Step01.ipynb
-- This script calculates variant minor allele counts from the genomic PLINK file used to generate the sparse Genetic Relationship Matrix (GRM). Before computing the counts, the PLINK file is subsetted to exclude samples that were not used in constructing the sparse GRM.
+# 3 – Variance Ratio Estimation
 
-### AML-SAIGE-GENE-Set-Based-Step02.ipynb
-- This script generates a list of 2,000 randomly selected variants for variance ratio estimation in SAIGE-GENE set-based analysis. Multiple variance ratios must be estimated based on different minor allele count (MAC) categories when –isCateVarianceRatio=TRUE. This differs from Step 1 in SAIGE for single-variant tests, where only a single variance ratio is estimated. By default, two variance ratios are estimated for the categories 10 ≤ MAC < 20 and MAC ≥ 20.
+This directory contains Jupyter notebooks for preparing the genotype data required for variance ratio estimation in SAIGE-GENE+ set-based association analyses. The scripts calculate minor allele counts (MAC), select variants for variance ratio estimation, and generate the corresponding PLINK files.
 
-### AML-SAIGE-GENE-Set-Based-Step03.ipynb
-- This script creates the PLINK file used for variance ratio estimation. Note that the file must contain at least 200 variants with MAC values falling within the specified categories. This PLINK file is used only for variance ratio estimation and contains random markers extracted from the LD-pruned PLINK file used for constructing the GRM and performing variance ratio estimation.
+## Notebooks
+
+| **Notebook** | **Description** |
+|---|---|
+| `03_01_aml_saige_gene_based_step01.ipynb` | Calculates variant minor allele counts (MAC) from the PLINK genotype data used to construct the sparse genetic relationship matrix (GRM). Before calculating allele counts, the PLINK dataset is restricted to individuals included in the sparse GRM. |
+| `03_02_aml_saige_gene_based_step02.ipynb` | Generates a set of 2,000 randomly selected variants for variance ratio estimation in SAIGE-GENE+ set-based association analyses. When `isCateVarianceRatio=TRUE`, separate variance ratios are estimated for different MAC categories. By default, two variance ratios are estimated for variants with \(10 \leq MAC < 20\) and \(MAC \geq 20\). |
+| `03_03_aml_saige_gene_based_step03.ipynb` | Generates the PLINK genotype files used for variance ratio estimation. The resulting dataset must contain at least 200 variants within each specified MAC category. Variants are randomly selected from the LD-pruned PLINK dataset used for sparse GRM construction and variance ratio estimation. |
+
+## Notes
+
+- The variance ratio estimation procedure follows the SAIGE-GENE+ set-based association testing workflow.
+- Multiple variance ratios are required when categorical variance ratio estimation is enabled using `isCateVarianceRatio=TRUE`.
+- The selected variants are used for variance ratio estimation and are distinct from the variants tested in the gene-based association analysis.
