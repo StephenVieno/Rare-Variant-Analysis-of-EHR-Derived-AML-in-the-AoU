@@ -6,7 +6,7 @@ import os
 import pandas as pd 
 
 # Loop through each chromosome 
-for chrom in range(22, 23):
+for chrom in [2, 4, 15, 17]:
     # Input
     input_file = f'C:\\Users\\User\\Projects\\favor\\exome\\european\\EUR_exome_chr{chrom}_variant_qc.snplist'
 
