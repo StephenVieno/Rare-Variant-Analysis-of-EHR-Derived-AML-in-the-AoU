@@ -1,3 +1,4 @@
+# Load packages 
 import pandas as pd 
 
 # Filter for CHIP-associated variants and genes using pre-established list of CHIP-associated variatns and genes 
@@ -10,6 +11,7 @@ hotspots = hotspots.iloc[2:].reset_index(drop=True)
 
 gene_list = hotspots.drop_duplicates(subset=['Gene'])
 
+# CHIP-associated gene list 
 gene_list[['Gene']].to_csv(r"C:\Users\User\Projects\aou\aml\output\gene_remove.txt",
                     sep='\t',
                     header=None,
@@ -19,6 +21,7 @@ gene = ['DNMT3A', 'TET2', 'IDH2', 'SRSF2']
 
 hotspots = hotspots[hotspots['Gene'].isin(gene)]
 
+# Reannotated variants 
 df = pd.read_csv(r"C:\Users\User\Projects\aou\aml\output\top_genes_reannotated.tsv",
                  sep='\t')
 
@@ -35,6 +38,7 @@ df = df[df["gene"].isin(gene)].copy()
 
 print(f"Check all markers are present: {df['id'].isin(check).all()}")
 
+# Load packages 
 import re
 import pandas as pd
 
@@ -83,14 +87,19 @@ print(f"Check for overlap in keep: {keep['id'].isin(remove['id']).any()}")
 print(f"Check for overlap in remove: {remove['id'].isin(keep['id']).any()}")
 print(f"Check all markers are present: {check.isin(pd.concat([keep, remove])['id']).all()}")
 
+# List of snps to keep 
 keep[['id']].to_csv(r"C:\Users\User\Projects\aou\aml\output\keep.txt",
                     sep='\t',
                     header=None,
                     index=None)
+
+# List of snps to remove (CHIP-associated variants) 
 remove[['id']].to_csv(r"C:\Users\User\Projects\aou\aml\output\remove.txt",
                     sep='\t',
                     header=None,
                     index=None)
+
+# Reannotated variants with HGVS 
 df.to_csv(r"C:\Users\User\Projects\aou\aml\output\top_genes_reannotated_hgvs.tsv",
                     sep='\t',
                     header=None,
