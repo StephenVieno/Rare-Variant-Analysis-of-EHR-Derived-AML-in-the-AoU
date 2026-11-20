@@ -15,29 +15,5 @@ The scripts support variant verification, dataset partitioning, annotation proce
 | `split_annotate_submission_v8.sh` | Bash | Coordinates and submits the split annotation workflow using the AoU v8 environment. |
 
 
-## Requirements
 
-| Dependency | Purpose |
-|---|---|
-| Python 3 | Execution of the SNP verification script |
-| R | Variant dataset splitting and annotation processing |
-| FAVOR | Functional annotation resources |
-| All of Us Researcher Workbench | AoU-specific computational environment and data access |
-| Computational resources | Processing and annotation of large variant datasets |
 
-Additional package dependencies, execution parameters, and environment-specific configurations are defined within the individual scripts.
-
-## Notes
-
-- The workflow is designed to support large-scale variant processing.
-- The submission script targets the AoU v8 environment; compatibility should be verified before use with other AoU data releases.
-- Input/output paths and computational resource requirements should be checked before execution.
-- The FAVOR annotation resource files are not included in this directory.
-
-## Project Information
-
-| Field | Details |
-|---|---|
-| Project | [Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU) |
-| Directory | `Local-Workspace/04_favor/` |
-| Author | [Stephen Vieno](https://github.com/StephenVieno) |
