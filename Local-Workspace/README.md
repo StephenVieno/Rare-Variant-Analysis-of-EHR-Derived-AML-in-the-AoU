@@ -29,7 +29,3 @@ The local workspace is organized into numbered directories corresponding to the 
 Each subdirectory contains its own README documenting the relevant analysis, software requirements, input files, scripts, and outputs where applicable.
 
 The workflows are intended to support reproducibility, transparency, and organization of the computational analyses performed outside the All of Us Researcher Workbench.
-
-## Repository
-
-[**Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU**](https://github.com/StephenVieno/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU)
