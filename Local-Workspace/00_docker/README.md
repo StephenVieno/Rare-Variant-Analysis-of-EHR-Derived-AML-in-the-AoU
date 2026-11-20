@@ -1,4 +1,4 @@
-# Docker Configuration
+# 0 – Docker Configuration
 
 This directory contains Dockerfiles for building containerized environments used in the local processing and annotation of genetic data. These containers provide the required software dependencies and tools for variant annotation, genomic data conversion, and downstream rare-variant analyses.
 
