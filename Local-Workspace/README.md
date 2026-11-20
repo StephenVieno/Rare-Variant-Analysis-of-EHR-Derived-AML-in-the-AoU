@@ -26,6 +26,6 @@ The local workspace is organized into numbered directories corresponding to the 
 
 ## Reproducibility
 
-Each subdirectory contains its own README documenting the relevant analysis, software requirements, input files, scripts, and outputs where applicable.
+Each subdirectory contains its own README documenting the relevant analysis, software requirements, and scripts.
 
 The workflows are intended to support reproducibility, transparency, and organization of the computational analyses performed outside the All of Us Researcher Workbench.
