@@ -13,8 +13,8 @@ The pipeline uses VEP and its associated plugins and annotation resources within
 | `gene_check_annotations.py` | Performs gene-level checks on VEP annotation output. |
 | `single_class_annotations.py` | Extracts or processes annotations belonging to a specified functional class. |
 | `hc_annotations.py` | Processes high-confidence (HC) variant annotations. |
-| `lovo_annotations.py` | Processes loss-of-function variant annotations. |
-| `uva_lovo_annotations.py` | Processes loss-of-function annotations using the UVA-specific workflow. |
+| `lovo_annotations.py` | Processes leave-one-variant-out variant annotations. |
+| `uva_lovo_annotations.py` | Processes leave-one-variant-out annotations using the UVA-specific workflow. |
 | `hc_burden_prs.py` | Generates high-confidence annotation-based variant sets for burden and PRS analyses. |
 | `exome_burden_prs.py` | Prepares exome-wide variant data for downstream burden and PRS analyses. |
 
