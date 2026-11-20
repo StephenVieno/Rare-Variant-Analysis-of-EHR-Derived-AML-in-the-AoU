@@ -6,7 +6,7 @@ This directory contains scripts for identifying, filtering, and prioritising gen
 
 The analysis focuses on CHIP-associated somatic variants in genes relevant to clonal hematopoiesis and AML development. Particular attention is given to identifying recurrent hotspot variants and annotating variants in genes of interest to support downstream biological interpretation.
 
-## Directory Contents
+## Scripts
 
 | File | Description |
 |---|---|
