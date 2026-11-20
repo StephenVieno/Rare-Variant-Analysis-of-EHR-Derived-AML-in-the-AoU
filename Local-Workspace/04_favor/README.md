@@ -6,15 +6,6 @@ This directory contains scripts and workflow components used for variant annotat
 
 The scripts support variant verification, dataset partitioning, annotation processing, and computational job submission for downstream rare-variant analyses.
 
-## Directory Structure
-
-| File | Description |
-|---|---|
-| `README.md` | Documentation for the FAVOR annotation workflow |
-| `eur_check_snplist_in_favor.py` | Checks the presence of European ancestry SNPs in FAVOR |
-| `split_annotate.r` | Splits variant datasets and performs annotation-processing steps |
-| `split_annotate_submission_v8.sh` | Submits the split annotation workflow in the AoU v8 environment |
-
 ## Scripts
 
 | Script | Language | Purpose |
@@ -23,15 +14,6 @@ The scripts support variant verification, dataset partitioning, annotation proce
 | `split_annotate.r` | R | Splits variant datasets into smaller subsets and performs the associated annotation-processing steps. |
 | `split_annotate_submission_v8.sh` | Bash | Coordinates and submits the split annotation workflow using the AoU v8 environment. |
 
-## Workflow
-
-| Step | Script / Component | Description |
-|---|---|---|
-| 1. Variant preparation | Input variant dataset | Prepare the variant list for annotation. |
-| 2. Variant verification | `eur_check_snplist_in_favor.py` | Check SNP availability and consistency against FAVOR. |
-| 3. Dataset partitioning | `split_annotate.r` | Divide the input variant dataset into manageable subsets for processing. |
-| 4. Job submission | `split_annotate_submission_v8.sh` | Submit the annotation workflow and associated computational jobs. |
-| 5. Downstream processing | Annotation outputs | Make the resulting annotations available for subsequent variant filtering and rare-variant analyses. |
 
 ## Requirements
 
