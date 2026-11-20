@@ -1,4 +1,4 @@
-# 1 – Variant Effect Predictor (VEP)
+# 01 – Variant Effect Predictor (VEP)
 
 This directory contains scripts for preparing genetic variant data, performing functional annotation using the Ensembl Variant Effect Predictor (VEP), and generating annotation-based variant subsets for downstream rare-variant burden and polygenic risk score (PRS) analyses.
 
