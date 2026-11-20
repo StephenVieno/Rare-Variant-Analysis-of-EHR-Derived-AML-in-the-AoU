@@ -19,7 +19,7 @@ The local workspace is organized into numbered directories corresponding to the 
 
 1. **Computational environment:** Configure reproducible software environments using Docker.
 2. **Variant annotation:** Annotate genetic variants using VEP and associated plugins.
-3. **Gene-set analyses:** Investigate biological pathways and gene-level functional context.
+3. **Gene-set analyses:** Identify biological pathways and gene-level functional context.
 4. **Post-GWAS analyses:** Conduct downstream analyses of common-variant association results.
 5. **Functional annotation:** Apply FAVOR annotations to support variant interpretation and prioritization.
 6. **CHIP investigation:** Evaluate potential clonal hematopoiesis contributions to observed rare-variant association signals.
