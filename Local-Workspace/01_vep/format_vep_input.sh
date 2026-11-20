@@ -2,14 +2,13 @@
 
 
 # Set environment path 
-path=/mnt/c/Users/User/projects/vep
+path=/Volumes/external_storage/vep_input
 
-for pop in AFR AMR CSA EAS EUR MID OCE; do 
-    for chrom in {1..22}; do
+for chrom in {1..22}; do
 
 # Report message: "start annotating chromosome" 
 echo "==============================================="
-echo "Processing chromosome ${chrom} for ${pop} ancestry ...."
+echo "Processing chromosome ${chrom} ...."
 echo "==============================================="
  
 awk -F':' 'BEGIN {
@@ -18,17 +17,16 @@ awk -F':' 'BEGIN {
 }
 {
     print substr($1,4), $2, $1 ":" $2 ":" $3 ":" $4, $3, $4, ".", ".", "."
-}' $path/exome/${pop}_exome_chr${chrom}_variant_qc.snplist > $path/input/${pop}_exome_chr${chrom}.vcf
+}' $path/exome/EUR_exome_chr${chrom}_variant_qc.snplist > $path/EUR_exome_chr${chrom}.vcf
 
-# Report message: "finished annotating chromosome" 
+# Report message: "finsihed annotating chromosome" 
 echo "==============================================="
-echo "Finished processing chromosome ${chrom} for ${pop} ancestry ...."
+echo "Finished processing chromosome ${chrom} ...."
 echo "==============================================="
 
-    done 
 done 
 
-# Finish loop 
+# Finsih loop 
 echo "==============================================="
 echo "Finished processing all chromosomes ...."
 echo "==============================================="
