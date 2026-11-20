@@ -1,4 +1,4 @@
-# 4 – favor: FAVOR Variant Annotation
+# 04 – FAVOR Variant Annotation
 
 ## Overview
 
