@@ -1,5 +1,6 @@
 import pandas as pd 
 
+# Filter for CHIP-associated variants and genes using pre-established list of CHIP-associated variatns and genes 
 hotspots = pd.read_excel(r"C:\Users\User\Projects\aou\aml\input\41588_2022_1121_MOESM3_ESM.xlsx", 
                    sheet_name="ST2",
                    header=None)
