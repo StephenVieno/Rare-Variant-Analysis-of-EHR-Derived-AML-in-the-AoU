@@ -10,9 +10,9 @@ The analysis focuses on CHIP-associated somatic variants in genes relevant to cl
 
 | File | Description |
 |---|---|
-| `chip_hotspot_filter.py` | Filters CHIP-associated variants based on hotspot-related criteria to prioritise variants of potential biological and clinical relevance. |
 | `vep_top_genes.py` | Processes Variant Effect Predictor (VEP) annotations to examine and prioritise variants affecting genes of interest. |
-| `README.md` | Documentation for the CHIP analysis workflow. |
+| `chip_hotspot_filter.py` | Filters CHIP-associated variants based on hotspot-related criteria to prioritise variants of potential biological and clinical relevance. |
+
 
 ## Analysis Workflow
 
