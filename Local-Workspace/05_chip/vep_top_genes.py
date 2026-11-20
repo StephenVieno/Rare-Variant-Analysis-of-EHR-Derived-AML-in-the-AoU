@@ -1,3 +1,4 @@
+# Load packages 
 import pandas as pd 
 import numpy as np 
 
@@ -7,7 +8,7 @@ gene = ['ENSG00000119772',
         'ENSG00000182054',
         'ENSG00000161547']
 
-# Functions
+# Extraction function 
 def extract(df, gene):
     '''
     Extracts variant information from saige-gene+ annotation table
@@ -69,6 +70,7 @@ headers = {
 results = []
 loop = 0
 
+# Load packages 
 import time
 import requests
 import pandas as pd
@@ -224,6 +226,7 @@ for start in range(0, len(string), 10):
 
 out = pd.DataFrame(results)
 
+# Save reannotated genes  
 out.to_csv(
     r"C:\Users\User\Projects\aou\aml\output\top_genes_reannotated.tsv",
     sep="\t",
