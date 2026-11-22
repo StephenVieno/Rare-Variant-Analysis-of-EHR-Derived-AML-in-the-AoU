@@ -8,7 +8,7 @@ This directory contains the local computational workflows, scripts, notebooks, a
 |:---|:---|
 | `00_docker` | Docker configuration and containerized environments for reproducible analyses. |
 | `01_vep` | Variant Effect Predictor (VEP) annotation workflows, including functional consequence annotation and plugin-based predictions. |
-| `02_gene_set` | Identifying gene from bulk RNA-seq and single-cell RNA sequencing resources. |
+| `02_gene_set` | Identifying gene sets from bulk RNA-seq and single-cell RNA sequencing resources. |
 | `03_post_common_gwas`| Post-GWAS analyses and downstream investigation of common-variant association results. |
 | `04_favor` | FAVOR-based variant annotation workflows. |
 | `05_chip` | Clonal hematopoiesis of indeterminate potential (CHIP) filtering workflows. |
