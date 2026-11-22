@@ -1,4 +1,4 @@
-# 4 – Gene-Based Association Analysis
+# 04 – Gene-Based Association Analysis
 
 This directory contains Jupyter notebooks for performing rare variant gene-based association analyses using SAIGE-GENE+. The pipeline includes annotation threshold sensitivity analyses, variance ratio estimation, null model fitting, gene-based association testing, and visualization of association results. Additional analyses evaluate the effects of deprivation index adjustment and alternative cohort and age definitions.
 
