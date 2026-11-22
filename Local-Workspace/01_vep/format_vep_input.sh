@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Set environment path 
 path=/Volumes/external_storage/vep_input
 
