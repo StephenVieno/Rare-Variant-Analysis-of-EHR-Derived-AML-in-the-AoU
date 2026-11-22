@@ -153,6 +153,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Format VEP file  
     ###############################################################################################
+    
     # VEP file name 
     input_file = f"EUR_exome_chr{chrom}.txt"
     # File name after remvoing commented lines 
