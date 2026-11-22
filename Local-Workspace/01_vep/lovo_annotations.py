@@ -153,6 +153,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Format VEP file  
     ###############################################################################################
+    
     # VEP file name 
     input_file = f"EUR_exome_chr{chrom}.txt"
     # File name after remvoing commented lines 
@@ -197,6 +198,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Filter transcripts 
     ###############################################################################################
+    
     # Filter for protein_coding variants 
     file = file[file['BIOTYPE'].str.contains("protein", case=False, na=False)]
     # Filter for MANE Select transcripts 
@@ -215,12 +217,14 @@ for chrom in range(1,23):
     ###############################################################################################
     # Format missense  
     ###############################################################################################
+    
     # Format vep missense plugins annotations columns 
     file["am_pathogenicity"] = pd.to_numeric(file["am_pathogenicity"].replace("-", 0))
     
     ###############################################################################################
     # Format splice 
     ###############################################################################################
+    
     # Expand Splice AI predictions 
     file = file.join(file["SpliceAI_pred"].str.split(r"|", expand=True).fillna(0))
     # Rename Splice AI columns 
@@ -306,6 +310,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Sort into SAIGE-GENE+ annotation files 
     ###############################################################################################
+    
     # Filter for annotations 
     file = file.dropna(axis=0, how='all', subset= ["Group"])
     # Remove duplicates for annotations
@@ -336,6 +341,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Format into SAIGE-GENE+ annoation files 
     ###############################################################################################
+    
     
     # Filter for signficant genes only 
     file = (file[file["Gene"].str.contains("ENSG00000119772|ENSG00000168769|ENSG00000161547|ENSG00000182054")])
