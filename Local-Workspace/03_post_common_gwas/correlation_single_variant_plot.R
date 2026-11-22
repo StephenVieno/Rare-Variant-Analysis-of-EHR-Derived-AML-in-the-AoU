@@ -1,3 +1,4 @@
+# Set working directory 
 setwd("/Users/stephenvieno/Projects/Rare-Variant-Analysis-of-EHR-Derived-AML-in-the-AoU/Single-Variant-Analysis/")
 
 # -------------------------------------------------------------------------
