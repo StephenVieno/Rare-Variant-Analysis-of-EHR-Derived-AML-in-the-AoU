@@ -99,6 +99,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Format VEP file  
     ###############################################################################################
+    
     # VEP file name 
     input_file = f"EUR_exome_chr{chrom}.txt"
     # File name after remvoing commented lines 
@@ -131,6 +132,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Filter transcripts 
     ###############################################################################################
+    
     # Filter for protein_coding variants 
     file = file[file['BIOTYPE'].str.contains("protein", case=False, na=False)]
     # Filter for MANE Select transcripts 
@@ -149,6 +151,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Format missense  
     ###############################################################################################
+    
     # Format vep missense plugins annotations columns 
     file["REVEL"] = pd.to_numeric(file["REVEL"].replace("-", 0))
     file["am_pathogenicity"] = pd.to_numeric(file["am_pathogenicity"].replace("-", 0))
@@ -156,6 +159,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Format splice 
     ###############################################################################################
+    
     # Expand Splice AI predictions 
     file = file.join(file["SpliceAI_pred"].str.split(r"|", expand=True).fillna(0))
     # Rename Splice AI columns 
@@ -175,6 +179,7 @@ for chrom in range(1,23):
     ###############################################################################################
     # Assingment functions: Assign annotations and rankings (score) based on plugins 
     ###############################################################################################
+    
     # Synonymous function 
     file["Synonymous"] = file.apply(synonymous, axis=1)
     # Missense function 
