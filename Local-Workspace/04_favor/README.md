@@ -10,9 +10,8 @@ The scripts support variant verification, dataset partitioning, annotation proce
 
 | Script | Language | Purpose |
 |---|---|---|
-| `eur_check_snplist_in_favor.py` | Python | Checks SNP availability in the FAVOR annotation dataset against the study variant list. |
-| `split_annotate_submission_v8.sh` | Bash | Coordinates and submits the split annotation workflow using the AoU v8 environment. |
-| `split_annotate.r` | R | Splits variant datasets into smaller subsets and performs the associated annotation-processing steps. |
-
+| `split_annotate_submission_v8.sh` | Bash | Coordinates and submits the split annotation workflow for FAVOR. |
+| `split_annotate.r` | R | Annotates the variants with FAVOR after splitting them into chunks. |
+| `eur_check_snplist_in_favor.py` | Python | Checks whether all variants in the variant list are present in the FAVOR annotation output. |
 
 
