@@ -6,4 +6,4 @@ This directory contains scripts for processing and analyzing bulk RNA-seq data f
 
 ### **2. Single-Cell RNA-Seq Analysis (GSE116256)**
 
-This directory contains scripts for processing and analyzing single-cell RNA-seq data from GSE116256, comprising AML and healthy bone marrow samples collected at diagnosis. The workflow includes quality control, normalization, doublet removal, data integration, and cell type–specific differential expression analysis to generate upregulated and downregulated gene sets for downstream rare variant polygenic risk score analyses.
+This directory contains scripts for processing and analyzing single-cell RNA-seq data from GSE116256, comprising bone marrow samples from patients with AML and healthy controls collected at diagnosis. The workflow includes quality control, normalization, doublet removal, data integration, and cell type–specific differential expression analysis to generate upregulated and downregulated gene sets for downstream rare variant polygenic risk score analyses.
