@@ -1,4 +1,4 @@
-# 02 – Gene Set 
+# 02 – Gene Set Analyses
 
 ### **1. Bulk RNA-Seq Analysis** 
 
