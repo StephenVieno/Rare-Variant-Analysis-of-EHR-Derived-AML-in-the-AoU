@@ -1,4 +1,4 @@
-# 3 – Summary Statistics Post-Processing and MAGMA Analysis
+# 03 – Summary Statistics Post-Processing and MAGMA Analysis
 
 This directory contains scripts for preprocessing SAIGE-GENE+ single-variant association summary statistics, assigning variant rsIDs, generating association plots, evaluating correlations between analyses with and without the deprivation index, and performing downstream gene and gene-set association analyses using MAGMA.
 
