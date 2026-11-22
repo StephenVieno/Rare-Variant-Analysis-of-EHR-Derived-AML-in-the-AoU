@@ -1,4 +1,4 @@
-# 2 – Sparse Genetic Relationship Matrix
+# 02 – Sparse Genetic Relationship Matrix
 
 This directory contains Jupyter notebooks for preparing genotype data and calculating ancestry-specific sparse genetic relationship matrices (GRMs) for downstream SAIGE-GENE+ analyses in the All of Us (AoU) Research Program. The workflow includes variant-level quality control, linkage disequilibrium (LD) pruning, genotype data preparation, and sparse GRM calculation across the African, American, and European ancestry groups.
 
