@@ -1,4 +1,4 @@
-# 3 – Variance Ratio Estimation
+# 03 – Variance Ratio Estimation
 
 This directory contains Jupyter notebooks for preparing the genotype data required for variance ratio estimation in SAIGE-GENE+ set-based association analyses. The scripts calculate minor allele counts (MAC), select variants for variance ratio estimation, and generate the corresponding PLINK files.
 
