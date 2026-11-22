@@ -1,4 +1,4 @@
-# 5 – GAUSS Gene Set Association Analysis
+# 05 – GAUSS Gene Set Association Analysis
 
 This directory contains Jupyter notebooks for performing gene set association analyses using the Generalized Association of Variant Sets (GAUSS) method. The analysis evaluates the enrichment of AML-associated genes across predefined gene sets from Gene Ontology (GO), Kyoto Encyclopedia of Genes and Genomes (KEGG), and the Molecular Signatures Database (MSigDB).
 
