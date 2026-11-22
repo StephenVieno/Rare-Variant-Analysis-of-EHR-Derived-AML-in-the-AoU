@@ -1,4 +1,4 @@
-# Table of Contents 
+# 02 – Gene Set 
 
 ### **1. Bulk RNA-Seq Analysis** 
 
