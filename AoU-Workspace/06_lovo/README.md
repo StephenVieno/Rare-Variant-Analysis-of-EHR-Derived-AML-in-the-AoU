@@ -8,8 +8,6 @@ The variant cross-referencing workflow compares variants identified in SAIGE-GEN
 
 The LOVO workflow uses SAIGE-GENE+ to evaluate the contribution of individual variants to gene-based association signals. This is achieved by iteratively removing one variant at a time from the original variant set and repeating the association testing procedure.
 
-Additional analyses incorporate socioeconomic deprivation as a covariate and use a separate University of Virginia (UVA) analysis dataset to investigate the robustness of the observed associations.
-
 ## Workflow
 
 The notebooks are organized according to the following analytical steps:
