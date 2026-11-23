@@ -2,9 +2,9 @@
 
 ## Overview
 
-This directory contains the rare variant polygenic risk score (PRS) analysis pipeline used to investigate the contribution of rare genetic variation to acute myeloid leukemia (AML) in the All of Us Research Program.
+This directory contains the rare burden score analysis pipeline used to investigate the contribution of rare genetic variation to acute myeloid leukemia (AML) in the All of Us Research Program.
 
-The analyses calculate rare variant burden scores at both the gene level and the exome level using SAIGE-GENE+ association results. Gene-level scores are subsequently aggregated into gene-set PRS based on biological and functional gene sets derived from bulk RNA-seq differential gene expression, Cox regression, single-cell RNA-seq differential gene expression, and somatic mutation analyses from the Genomic Data Commons (GDC).
+The analyses calculate rare variant burden scores at both the gene level and the exome level using SAIGE-GENE+ association results. Gene-level scores are subsequently aggregated into gene-set burden scores based on biological and functional gene sets derived from bulk RNA-seq differential gene expression, Cox regression, single-cell RNA-seq differential gene expression, and somatic mutation analyses from the Genomic Data Commons (GDC).
 
 The resulting gene-set and exome-level PRS are incorporated into logistic regression models to investigate associations with AML status. Additional analyses restrict the cohort to unrelated individuals to assess the robustness of the observed associations.
 
