@@ -4,7 +4,7 @@
 
 This directory contains the variant cross-referencing and leave-one-variant-out (LOVO) analysis pipelines used to investigate rare variant associations with acute myeloid leukemia (AML) in the All of Us Research Program.
 
-The variant cross-referencing workflow compares variants identified in SAIGE-GENE+ marker lists with somatic mutations reported in the Genomic Data Commons (GDC) and germline variants reported in ClinVar. Analyses are conducted separately for ultra-rare variants (minor allele count [MAC] ≤ 10) and rare variants (minor allele frequency [MAF] < 1% and MAC > 10).
+The variant cross-referencing workflow compares variants identified in SAIGE-GENE+ marker lists with somatic mutations reported in the Genomic Data Commons (GDC) and germline variants reported in ClinVar. 
 
 The LOVO workflow uses SAIGE-GENE+ to evaluate the contribution of individual variants to gene-based association signals. This is achieved by iteratively removing one variant at a time from the original variant set and repeating the association testing procedure.
 
