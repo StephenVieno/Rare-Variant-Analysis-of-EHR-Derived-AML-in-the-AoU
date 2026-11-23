@@ -67,16 +67,7 @@ A secondary LOVO analysis investigates the influence of socioeconomic deprivatio
 - Compare the resulting association statistics with those from the primary AML analysis.
 - Evaluate whether individual variants contribute differently to the association signals after adjustment for socioeconomic deprivation.
 
-### 4. University of Virginia (UVA) LOVO Analysis
-
-An additional LOVO analysis is performed using the UVA analysis dataset to investigate the contribution of individual variants to the gene-based association signals.
-
-- Identify variants passing exome QC within the genes of interest.
-- Generate chromosome-specific PLINK BED files using the UVA exome dataset.
-- Perform SAIGE-GENE+ Step 2 association testing across the leave-one-variant-out annotation sets.
-- Evaluate the contribution of individual variants to the resulting gene-based association statistics.
-
-### 5. Results Visualization
+### 4. Results Visualization
 
 The LOVO association results are processed and visualized to facilitate comparisons between the complete variant sets and the corresponding leave-one-variant-out analyses.
 
