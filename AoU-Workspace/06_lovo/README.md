@@ -26,7 +26,6 @@ The notebooks are organized according to the following analytical steps:
 | `06_08_aml_uva_lovo_step01.ipynb` | Generate chromosome-specific PLINK BED files from the UVA exome dataset by selecting variants that pass QC within the genes of interest. The notebook must be submitted separately for each chromosome containing a gene of interest. |
 | `06_09_aml_uva_lovo_step02.ipynb` | Perform SAIGE-GENE+ Step 2 association testing for each leave-one-variant-out annotation set using the UVA analysis dataset. |
 | `06_10_aml_marker_list_plot.ipynb` | Process and visualize the primary AML marker-list LOVO results. |
-| `06_11_aml_deprivation_index_marker_list_plot.ipynb` | Process and visualize the deprivation-index-adjusted AML marker-list LOVO results. |
 
 ## Analysis Components
 
