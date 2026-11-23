@@ -83,6 +83,6 @@ The variant cross-referencing analysis can be performed separately using `06_01_
 
 The deprivation-index-adjusted analysis uses `06_05_aml_deprivation_index_marker_list.ipynb` for variant cross-referencing, followed by `06_06_aml_deprivation_index_lovo_step02.ipynb` for association testing and `06_07_aml_deprivation_index_lovo_plot.ipynb` for visualization.
 
-The additional marker-list visualization notebooks, `06_10_aml_marker_list_plot.ipynb` and `06_11_aml_deprivation_index_marker_list_plot.ipynb`, can be executed to generate the corresponding visualizations.
+The additional marker-list visualization notebooks, `06_10_aml_marker_list_plot.ipynb`, can be executed to generate the corresponding visualizations.
 
 **Important:** Step 1 of the LOVO workflow must be submitted separately for each chromosome containing a gene of interest. The resulting chromosome-specific PLINK BED files must be available before proceeding with the corresponding association testing. Each leave-one-variant-out annotation set should contain the original variant collection with exactly one individual variant removed.
